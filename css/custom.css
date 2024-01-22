@@ -292,6 +292,23 @@ body {
   background-size: contain;
 }
 
+.icon-bigstar {
+  display: flex;
+  width: 18.95px;
+  height: 18.95px;
+  background: url(../media/icon/star_active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-bigstar.disable {
+  background: url(../media/icon/star_disable.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 .dec-line-freelancers::after {
   content: "";
   position: absolute;
