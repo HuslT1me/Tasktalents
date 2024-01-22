@@ -7,105 +7,114 @@
     <link rel="stylesheet" href="../../css/custom.css" />
     <title>Nommad</title>
   </head>
-
   <body>
     <header class="header bg-[#141133] h-[65px] flex items-center bg-[#141133] text-white font-medium">
       <div class="container mx-auto">
-        <div class="grid grid-cols-3">
-          <div>
+        <div class="grid grid-cols-[1fr_auto_auto] md:grid-cols-[1fr_auto_1fr] gap-x-5 md:gap-x-0">
+          <div class="flex items-center">
             <a href="" class="inline-block">
               <img class="header__logo-img" src="../../media/icon/logo.svg" alt="BILLINGER" />
             </a>
           </div>
-          <nav class="nav mx-auto">
-            <ul class="header__nav-menu flex gap-[33px] place-self-center text-[14px] font-[500]">
-              <li class="header__list-item">
+          <div class="flex md:hidden text-sm place-self-end mb-auto">
+            <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00]" href="#">Sign up</a>
+          </div>
+          <div class="flex flex-col md:hidden gap-y-1 place-self-end mb-2.5 pr-2.5">
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+          </div>
+          <nav class="nav hidden md:block mx-auto pr-[69px]">
+            <ul class="header__nav-menu flex gap-[33px] place-self-center text-sm font-medium leading-[19px]">
+              <li>
                 <a class="hover:text-[#CBFC00]" href="#">Company's</a>
               </li>
-              <li class="header__list-item">
-                <a class="opacity-[0.5]" href="#">Freelancers</a>
+              <li>
+                <a class="hover:text-[#CBFC00]" href="#">Freelancers</a>
               </li>
-              <li class="header__list-item">
+              <li>
                 <a class="hover:text-[#CBFC00]" href="#">Work</a>
               </li>
             </ul>
           </nav>
-          <div class="header__inner flex place-self-end">
-            <div class="flex header__laguage mr-[100px] gap-x-[25px] text-[14px]">
-              <a class="hover:opacity-[0.7]" href="#">en</a>
-              <a class="text-[#FFFFFF4D]" href="#">ru</a>
+          <div class="hidden md:flex place-self-end">
+            <div class="flex header__laguage mr-[100px] gap-x-[25px] text-sm">
+              <a class="hover:opacity-[0.7] leading-[19px]" href="#">en</a>
+              <a class="text-[#FFFFFF4D] leading-[19px]" href="#">ru</a>
             </div>
-            <div class="flex text-[14px] gap-[32px]">
-              <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00]" href="#">Sign up</a>
-              <a class="header__button-enter hover:text-[#CBFC00]" href="#">Sign in</a>
+            <div class="flex text-sm gap-[32px]">
+              <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00] leading-[19px]" href="#">Sign up</a>
+              <a class="header__button-enter hover:text-[#CBFC00] leading-[19px]" href="#">Sign in</a>
             </div>
           </div>
         </div>
       </div>
     </header>
     <main class="overflow-hidden">
-      <section class="bg-[#141133] relative line-horizontal-item">
-        <div class="container bg-[#141133] relative line-vertical line-vertical-right z-[5] mx-auto pt-[44px]">
-          <div class="flex gap-[8px] ml-[36px] pb-[60px]">
-            <a class="text-[14px] text-[#CBFC00] font-[400] leading-[26px]" href="#"> Freelancers </a>
-            <span class="text-[14px] text-[#424242] font-[400] leading-[26px]">></span>
-            <a class="text-[14px] text-[#CBFC00] font-[400] leading-[26px]" href="#"> Design / Branding & Creativity </a>
-            <span class="text-[14px] text-[#424242] font-[400] leading-[26px]">></span>
-            <span class="text-white text-[14px] text-[#989898] font-[400] leading-[26px]"> Rudolf E </span>
+      <section class="bg-[#141133] relative line-horizontal-item before:top-[35%] before:md:top-[40%]">
+        <div class="container bg-[#141133] relative line-vertical line-vertical-right z-[5] mx-auto pt-10 md:pt-[28px]">
+          <div class="flex gap-2 ml-9 pb-[51px] flex-wrap">
+            <a class="text-sm text-[#CBFC00] font-normal leading-[26px]" href="#"> Freelancers </a>
+            <span class="text-sm text-[#424242] font-normal leading-[26px]">></span>
+            <a class="text-sm text-[#CBFC00] font-normal leading-[26px]" href="#"> Design / Branding & Creativity </a>
+            <span class="text-sm whitespace-nowrap text-[#424242] font-normal leading-[26px]">></span>
+            <span class="text-white text-sm text-[#989898] font-normal leading-[26px]"> Rudolf E </span>
           </div>
         </div>
       </section>
-      <section class="bg-[#F4F4F4] pt-[88px] overflow-hidden">
+      <section class="bg-[#F4F4F4] pt-[60px] md:pt-[115px] overflow-hidden">
         <div class="container mx-auto">
           <div>
-            <div class="flex items-center">
-              <div class="flex items-baseline relative pl-[202px] pr-[35px]">
-                <b class="text-[38px] text-[#141133] font-['DM_Sans'] font-[700] leading-[38px]">Rudolf E</b>
-                <p class="text-[18px] leading-[20px] ml-[36px]">JavaScript Developer</p>
-                <div class="flex w-full md:w-[150px] pl-[20px] md:pl-[36px] ml-auto mt-[30px] md:mt-0 dec-line-freelancers">
+            <div class="flex flex-col md:flex-row items-start md:items-center">
+              <div class="flex flex-col md:flex-row items-start relative pb-[41px] md:pt-2 pl-[110px] md:pl-[231px] md:pr-[35px]">
+                <div class="flex flex-col md:flex-row ml-[2px] md:ml-0">
+                  <b class="text-2xl md:text-[38px] text-[#141133] font-dmsans font-bold leading-[38px]">Rudolf E</b>
+                  <p class="text-sm md:text-lg leading-5 md:ml-9">JavaScript Developer</p>
+                </div>
+                <div class="flex w-full md:w-[150px] pt-0 md:pt-[5px] md:pl-[36px] ml-auto mt-2 md:mt-0 dec-line-freelancers after:top-[73px] after:md:top-[22px]">
                   <div class="flex items-center gap-[9px] md:mb-[23px] pl-[1px]">
-                    <div class="flex items-baseline gap-[4px]">
+                    <div class="flex items-baseline gap-1">
                       <span class="icon-star"></span>
                       <span class="icon-star"></span>
                       <span class="icon-star"></span>
                       <span class="icon-star"></span>
                       <span class="icon-star disable"></span>
                     </div>
-                    <div class="text-[12px] leading-[20px] text-[#ACACAC]">4/5</div>
+                    <div class="text-xs leading-5 text-[#ACACAC]">4/5</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="grid grid-cols-1 grid-rows-2 md:grid-cols-[280px_142px_1fr] md:grid-rows-1 pl-[32px]">
-              <div class="bg-[#141133] rounded-tr-[30px] px-[35px] pb-[30px] relative h-[232px] row-start-1 row-end-2 col-start-1 col-end-2 md:col-start-1 md:col-end-3 z-[10]">
-                <img class="shadow-avatar absolute top-[-124px] left-[-32px] w-[170px] h-[170px] rounded-[100px]" src="../../media/avatars/avatar-08.webp" alt="" />
-                <div class="flex">
-                  <p class="text-white text-[14px] leading-[20px] pt-[72px]"><span class="font-[700] mr-[5px]">7</span>reviews</p>
-                  <div class="border-l-[2px] border-[#CBFC00] border-opacity-[0.3] ml-[78px] pl-[27px]">
-                    <p class="text-white text-[16px] font-[700] leading-[20px] md:mt-[30px]">$40 hour</p>
-                    <p class="text-white text-[14px] leading-[20px] md:mt-[22px]"><span class="font-[700] mr-[5px]">16</span>jobs posted</p>
+            <div class="grid grid-cols-1 grid-rows-1 md:grid-cols-[280px_142px_1fr] md:grid-rows-1 md:pl-[32px]">
+              <div class="bg-[#141133] rounded-tr-[30px] px-5 md:px-[35px] pb-5 md:pb-[30px] relative md:h-[232px] row-start-1 row-end-2 col-start-1 col-end-2 md:col-start-1 md:col-end-3 z-[10]">
+                <img class="shadow-item absolute top-[-124px] left-0 md:left-[-31px] w-[90px] md:w-[170px] h-[90px] md:h-[170px] rounded-[100px]" src="../../media/avatars/avatar-08.webp" alt="" />
+                <div class="flex justify-evenly md:justify-start">
+                  <p class="text-white text-sm leading-5 pt-5 md:pt-[68px]"><span class="font-bold mr-[5px]">7</span>reviews</p>
+                  <div class="border-l-[2px] border-[#CBFC00] border-opacity-[0.3] md:ml-[78px] pl-5 md:pl-[27px] pt-5 md:pt-0">
+                    <p class="text-white text-sm md:text-base font-bold leading-5 md:mt-[26px]">$40 hour</p>
+                    <p class="text-white text-sm leading-5 md:mt-[18px]"><span class="font-bold mr-[5px]">16</span>jobs posted</p>
                   </div>
                 </div>
-                <div class="pt-[41px] flex">
-                  <p class="text-white text-[14px] font-[700] leading-[20px] mr-[15px] pt-[5px]">Skills:</p>
-                  <ul class="flex flex-wrap text-[12px] text-[#CBFC00] font-[500] leading-[20px] gap-[15px]">
+                <div class="pt-[30px] md:pt-[41px] flex">
+                  <p class="text-white max-h-[25px] text-sm font-bold leading-5 mr-[15px] pt-[5px]">Skills:</p>
+                  <ul class="flex flex-wrap text-xs text-[#CBFC00] font-medium leading-5 gap-[9px] md:gap-[15px]">
                     <li>
-                      <a class="flex border border-[#CBFC00] rounded-[4px] py-[4px] px-[10px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
+                      <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
                     </li>
                     <li>
-                      <a class="flex border border-[#CBFC00] rounded-[4px] py-[4px] px-[10px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
+                      <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
                     </li>
                     <li>
-                      <a class="flex border border-[#CBFC00] rounded-[4px] py-[4px] px-[10px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
+                      <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
                     </li>
                     <li>
-                      <a class="flex border border-[#CBFC00] rounded-[4px] py-[4px] px-[10px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
+                      <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="bg-white md:p-[47px_45px_51px_210px] mt-[12px] row-start-2 row-end-3 col-start-1 col-end-2 md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-4 z-[5]">
-                <p class="text-[18px] leading-[32px]">
+              <div class="bg-white p-5 md:p-[47px_45px_51px_210px] mt-[12px] row-start-2 row-end-3 col-start-1 col-end-2 md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-4 z-[5]">
+                <p class="text-[15px] md:text-base md:text-lg leading-7 md:leading-8">
                   Expertise in native app development using Swift for iOS and Java/Kotlin for Android. Proficiency in cross-platform frameworks such as React Native or Flutter. Ability to develop customized features and functionalities
                   tailored to your specific requirements.Integration of third-party APIs and services to enhance the app's capabilities. Attention to detail and a focus on creating intuitive user interfaces. Collaborating with me means
                   you'll have a dedicated professional who will ensure your app is developed with efficiency and high-quality standards.
@@ -115,84 +124,84 @@
           </div>
         </div>
       </section>
-      <section class="pt-[70px] bg-[#F4F4F4]">
+      <section class="pt-[60px] md:pt-[70px] bg-[#F4F4F4]">
         <div class="container mx-auto">
-          <div class="flex justify-between">
-            <p class="text-[26px] text-[#141133] font-['DM_Sans'] leading-[45px] gap-[20px]">Client reviews:</p>
+          <div class="flex flex-col md:flex-row md:justify-between gap-[30px] md:gap-5">
+            <p class="text-[26px] text-[#141133] font-dmsans leading-[45px]">Client reviews:</p>
             <div>
               <div class="flex flex-col place-self-end mb-[26px]">
-                <div class="bg-[#141133] max-w-[870px] w-full place-self-end">
-                  <ul class="flex text-[14px] text-[#BEBEBE] leading-[20px] px-[20px] gap-[15px]">
-                    <li class="py-[18px]">
+                <div class="bg-[#141133] md:max-w-[870px] w-full place-self-end">
+                  <ul class="flex flex-col md:flex-row text-sm text-[#BEBEBE] leading-5 md:px-[20px] md:gap-[15px]">
+                    <li class="py-3 md:py-[18px] border-b-[2px] md:border-b-0 border-[#CBFC00] border-opacity-[0.3] pl-[17px] md:pl-0">
                       <time>12.06.2023</time>
                     </li>
-                    <li class="py-[18px] border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
+                    <li class="py-3 md:py-[18px] border-b-[2px] md:border-b-0 md:border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
                       <p class="pl-[17px]">Company</p>
                     </li>
-                    <li class="py-[18px] border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
-                      <p class="pl-[17px]"><span class="text-white font-[700] mr-[5px]">1940$</span>offer</p>
+                    <li class="py-3 md:py-[18px] border-b-[2px] md:border-b-0 md:border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
+                      <p class="pl-[17px]"><span class="text-white font-bold mr-[5px]">1940$</span>offer</p>
                     </li>
-                    <li class="py-[18px] border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
-                      <p class="pl-[17px]"><time class="text-white font-[700] mr-[5px]">12.08.2023</time>deadline</p>
+                    <li class="py-3 md:py-[18px] border-b-[2px] md:border-b-0 md:border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
+                      <p class="pl-[17px]"><time class="text-white font-bold mr-[5px]">12.08.2023</time>deadline</p>
                     </li>
-                    <li class="py-[18px] border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
+                    <li class="py-3 md:py-[18px] md:border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
                       <div class="flex items-center gap-[9px] pl-[17px]">
-                        <div class="flex items-baseline gap-[4px]">
+                        <div class="flex items-baseline gap-1">
                           <span class="icon-star-green"></span>
                           <span class="icon-star-green"></span>
                           <span class="icon-star-green"></span>
                           <span class="icon-star-green"></span>
                           <span class="icon-star disable"></span>
                         </div>
-                        <div class="text-[12px] leading-[20px] text-[#ACACAC]">4/5</div>
+                        <div class="text-xs leading-5 text-[#ACACAC]">4/5</div>
                       </div>
                     </li>
                   </ul>
                 </div>
-                <div class="bg-white p-[43px_35px_40px_44px] max-w-[914px]">
-                  <div class="pb-[32px]">
-                    <a class="text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[38px] hover:opacity-[0.7] line-clamp-1" href="#"> VFX game development and video production </a>
+                <div class="bg-white p-5 md:p-[43px_35px_40px_44px] max-w-[914px]">
+                  <div class="pb-5 md:pb-[32px]">
+                    <a class="text-2xl md:text-3xl text-[#141133] font-bold font-dmsans leading-8 md:leading-[38px] hover:opacity-[0.7] line-clamp-3 w-full" href="#"> VFX game development and video production </a>
                   </div>
-                  <p class="text-[15px] leading-[28px]">
+                  <p class="text-sm md:text-[15px] leading-6 md:leading-7">
                     Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
                     well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS.
                   </p>
                 </div>
               </div>
               <div class="flex flex-col">
-                <div class="bg-[#141133] max-w-[870px] w-full place-self-end">
-                  <ul class="flex text-[14px] text-[#BEBEBE] leading-[20px] px-[20px] gap-[15px]">
-                    <li class="py-[18px]">
+                <div class="bg-[#141133] md:max-w-[870px] w-full place-self-end">
+                  <ul class="flex flex-col md:flex-row text-sm text-[#BEBEBE] leading-5 md:px-[20px] md:gap-[15px]">
+                    <li class="py-3 md:py-[18px] border-b-[2px] md:border-b-0 border-[#CBFC00] border-opacity-[0.3] pl-[17px] md:pl-0">
                       <time>12.06.2023</time>
                     </li>
-                    <li class="py-[18px] border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
+                    <li class="py-3 md:py-[18px] border-b-[2px] md:border-b-0 md:border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
                       <p class="pl-[17px]">Company</p>
                     </li>
-                    <li class="py-[18px] border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
-                      <p class="pl-[17px]"><span class="text-white font-[700] mr-[5px]">1940$</span>offer</p>
+                    <li class="py-3 md:py-[18px] border-b-[2px] md:border-b-0 md:border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
+                      <p class="pl-[17px]"><span class="text-white font-bold mr-[5px]">1940$</span>offer</p>
                     </li>
-                    <li class="py-[18px] border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
-                      <p class="pl-[17px]"><time class="text-white font-[700] mr-[5px]">12.08.2023</time>deadline</p>
+                    <li class="py-3 md:py-[18px] border-b-[2px] md:border-b-0 md:border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
+                      <p class="pl-[17px]"><time class="text-white font-bold mr-[5px]">12.08.2023</time>deadline</p>
                     </li>
-                    <li class="py-[18px] border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
+                    <li class="py-3 md:py-[18px] md:border-l-[2px] border-[#CBFC00] border-opacity-[0.3]">
                       <div class="flex items-center gap-[9px] pl-[17px]">
-                        <div class="flex items-baseline gap-[4px]">
+                        <div class="flex items-baseline gap-1">
                           <span class="icon-star-green"></span>
                           <span class="icon-star-green"></span>
                           <span class="icon-star-green"></span>
                           <span class="icon-star-green"></span>
                           <span class="icon-star disable"></span>
                         </div>
-                        <div class="text-[12px] leading-[20px] text-[#ACACAC]">4/5</div>
+                        <div class="text-xs leading-5 text-[#ACACAC]">4/5</div>
                       </div>
                     </li>
                   </ul>
                 </div>
-                <div class="bg-white p-[43px_35px_40px_44px] max-w-[914px]">
-                  <div class="pb-[32px]">
-                    <a class="text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[38px] hover:opacity-[0.7] line-clamp-1" href="#"> Creating a mobile application for booking tickets </a>
+                <div class="bg-white p-5 md:p-[43px_35px_40px_44px] max-w-[914px]">
+                  <div class="pb-5 md:pb-[32px]">
+                    <a class="text-2xl md:text-3xl text-[#141133] font-bold font-dmsans leading-8 md:leading-[38px] hover:opacity-[0.7] line-clamp-3 w-full" href="#"> Creating a mobile application for booking tickets </a>
                   </div>
-                  <p class="text-[15px] leading-[28px]">
+                  <p class="text-sm md:text-[15px] leading-6 md:leading-7">
                     Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
                     well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS.
                   </p>
@@ -203,20 +212,16 @@
         </div>
       </section>
     </main>
-    <footer class="pt-[121px] mb-[23px] bg-[#F4F4F4]">
+    <footer class="pt-[60px] md:pt-[121px] pb-[23px] bg-[#F4F4F4]">
       <div class="container mx-auto">
         <div class="border border-[#CECECE] rounded-[3px]">
-          <div class="flex justify-between">
-            <div class="flex gap-[42px] border-r border-[#CECECE] py-[16px] pl-[23px] pr-[37px]">
-              <a class="text-[14px] font-[700] leading-[26px]" href="#">Softskill.ai</a>
-              <p class="text-[14px] font-[400] leading-[26px]">All rights reserved © 2023</p>
-            </div>
-            <div class="place-self-center pr-[19px]">
-              <address class="text-[14px] font-[400] not-italic leading-[26px]">Softskill OU, reg. 16356331 Address: Narva mnt 5, Tallinn, 10117, Estonia</address>
-            </div>
+          <div class="md:px-[23px] px-6 py-[13px] md:px-0 md:py-0 w-full flex flex-col md:flex-row gap-1 md:gap-[42px]">
+            <p class="text-sm font-bold leading-[26px] md:py-4" href="#">Softskill.ai</p>
+            <p class="text-sm font-normal leading-[26px] md:py-4 md:pr-[37px] md:border-r md:border-[#CECECE]">All rights reserved © 2023</p>
+            <address class="md:text-end grow text-sm font-normal not-italic leading-[26px] md:py-4">Softskill OU, reg. 16356331 Address: Narva mnt 5, Tallinn, 10117, Estonia</address>
           </div>
           <div class="border-t border-[#CECECE] px-[23px] py-[13px]">
-            <ul class="flex gap-[41px] text-[14px] font-[600] leading-[26px]">
+            <ul class="flex flex-col md:flex-row gap-1 md:gap-[41px] text-sm font-semibold leading-[26px]">
               <a href="#">Terms of use</a>
               <a href="#">Subcontractor offer</a>
               <a href="#">Customer Agreement</a>

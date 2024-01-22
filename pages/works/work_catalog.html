@@ -10,33 +10,41 @@
   <body>
     <header class="header bg-[#141133] h-[65px] flex items-center bg-[#141133] text-white font-medium">
       <div class="container mx-auto">
-        <div class="grid grid-cols-3">
-          <div>
+        <div class="grid grid-cols-[1fr_auto_auto] md:grid-cols-[1fr_auto_1fr] gap-x-5 md:gap-x-0">
+          <div class="flex items-center">
             <a href="" class="inline-block">
               <img class="header__logo-img" src="../../media/icon/logo.svg" alt="BILLINGER" />
             </a>
           </div>
-          <nav class="nav mx-auto">
-            <ul class="header__nav-menu flex gap-[33px] place-self-center text-[14px] font-[500]">
-              <li class="header__list-item">
+          <div class="flex md:hidden text-sm place-self-end mb-auto">
+            <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00]" href="#">Sign up</a>
+          </div>
+          <div class="flex flex-col md:hidden gap-y-1 place-self-end mb-2.5 pr-2.5">
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+          </div>
+          <nav class="nav hidden md:block mx-auto pr-[69px]">
+            <ul class="header__nav-menu flex gap-[33px] place-self-center text-sm font-medium leading-[19px]">
+              <li>
                 <a class="hover:text-[#CBFC00]" href="#">Company's</a>
               </li>
-              <li class="header__list-item">
-                <a class="opacity-[0.5]" href="#">Freelancers</a>
+              <li>
+                <a class="hover:text-[#CBFC00]" href="#">Freelancers</a>
               </li>
-              <li class="header__list-item">
+              <li>
                 <a class="hover:text-[#CBFC00]" href="#">Work</a>
               </li>
             </ul>
           </nav>
-          <div class="header__inner flex place-self-end">
-            <div class="flex header__laguage mr-[100px] gap-x-[25px] text-[14px]">
-              <a class="hover:opacity-[0.7]" href="#">en</a>
-              <a class="text-[#FFFFFF4D]" href="#">ru</a>
+          <div class="hidden md:flex place-self-end">
+            <div class="flex header__laguage mr-[100px] gap-x-[25px] text-sm">
+              <a class="hover:opacity-[0.7] leading-[19px]" href="#">en</a>
+              <a class="text-[#FFFFFF4D] leading-[19px]" href="#">ru</a>
             </div>
-            <div class="flex text-[14px] gap-[32px]">
-              <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00]" href="#">Sign up</a>
-              <a class="header__button-enter hover:text-[#CBFC00]" href="#">Sign in</a>
+            <div class="flex text-sm gap-[32px]">
+              <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00] leading-[19px]" href="#">Sign up</a>
+              <a class="header__button-enter hover:text-[#CBFC00] leading-[19px]" href="#">Sign in</a>
             </div>
           </div>
         </div>
@@ -44,387 +52,428 @@
     </header>
     <main class="overflow-hidden">
       <!--Прокинул, пока нет адаптива-->
-      <section class="bg-[#141133] relative line-horizontal-catalog">
-        <div class="container bg-[#141133] relative line-vertical line-vertical-right z-[5] mx-auto pt-[44px]">
-          <div class="ml-[74px] pb-[85px] flex justify-between">
+      <section class="bg-[#141133] relative line-horizontal-catalog after:hidden after:md:block md:after:top-[55%]">
+        <div class="container bg-[#141133] line-vertical line-vertical-right relative z-[5] mx-auto pt-[36px]">
+          <div class="ml-2.5 md:ml-[74px] pb-10 md:pb-[77px] flex flex-col md:flex-row md:justify-between gap-5">
             <div class="flex flex-col">
-              <div class="flex gap-[8px] pb-[38px]">
-                <a class="text-[14px] text-[#CBFC00] font-[400] leading-[26px]" href="#">Work</a>
-                <span class="text-[14px] text-[#424242] font-[400] leading-[26px]">></span>
-                <span class="text-[14px] text-[#989898] font-[400] leading-[26px]">Design / Branding & Creativity</span>
+              <div class="flex gap-2 pb-5 md:pb-[38px] flex-wrap">
+                <a class="text-sm text-[#CBFC00] font-normal leading-[26px]" href="#">Work</a>
+                <span class="text-sm whitespace-nowrap text-[#424242] font-normal leading-[26px]">></span>
+                <span class="text-sm text-[#989898] font-normal leading-[26px]">Design / Branding & Creativity</span>
               </div>
-              <h1 class="text-white text-[50px] font-['DM_Sans'] font-[700] leading-[50px]">Freelancers catalog</h1>
+              <h1 class="clamp-companys text-white font-dmsans font-bold leading-[50px] tracking-[-2px]">Work catalog</h1>
             </div>
             <div class="flex items-end">
-              <div class="flex items-center">
-                <p class="text-[15px] text-[#A2A2A2] font-[700] mr-[14px]">Filter:</p>
-                <div
-                  class="flex items-center min-w-[264px] min-h-[44px] pl-[16px] pr-[25px] bg-[#FFF] border-[1px] border-input rounded-[3px] text-[14px] font-[400] leading-[20px] cursor-pointer hover-border select relative whitespace-nowrap overflow-hidden mr-[45px]"
-                >
-                  <span>Design / Branding &amp; Creativity</span>
+              <div class="flex flex-col md:flex-row gap-6 md:gap-0 z-[5]">
+                <div class="flex items-center">
+                  <p class="text-[15px] text-[#A2A2A2] font-bold mr-3.5">Filter:</p>
+                  <div
+                    class="flex items-center w-[210px] md:min-w-[264px] min-h-11 pl-2 md:pl-4 pr-2.5 pr-[25px] bg-white border-[1px] border-input rounded-[3px] text-sm font-normal leading-5 cursor-pointer hover-border select relative whitespace-nowrap overflow-hidden md:mr-[45px]"
+                  >
+                    <span class="truncate pr-[5px] md:pr-0">Design / Branding &amp; Creativity</span>
+                  </div>
                 </div>
-                <p class="text-[15px] text-[#A2A2A2] font-[700] mr-[14px]">Sort:</p>
-                <div
-                  class="flex items-center min-w-[180px] min-h-[44px] pl-[16px] pr-[25px] bg-[#FFF] border-[1px] border-input rounded-[3px] text-[14px] font-[400] leading-[20px] cursor-pointer hover-border select relative whitespace-nowrap overflow-hidden"
-                >
-                  Data created
-                  <svg class="mt-[-4px] ml-[10px]" width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M2 12L1.64645 11.6464L0.792893 12.5H2V12ZM13 12V12.5H13.5V12H13ZM13.3536 0.646447C13.1583 0.451184 12.8417 0.451184 12.6464 0.646447L9.46447 3.82843C9.2692 4.02369 9.2692 4.34027 9.46447 4.53553C9.65973 4.7308 9.97631 4.7308 10.1716 4.53553L13 1.70711L15.8284 4.53553C16.0237 4.7308 16.3403 4.7308 16.5355 4.53553C16.7308 4.34027 16.7308 4.02369 16.5355 3.82843L13.3536 0.646447ZM2 12.5H13V11.5H2V12.5ZM13.5 12V1H12.5V12H13.5ZM2.35355 12.3536L7.35355 7.35355L6.64645 6.64645L1.64645 11.6464L2.35355 12.3536Z"
-                      fill="black"
-                    ></path>
-                  </svg>
+                <div class="flex items-center">
+                  <p class="text-[15px] text-[#A2A2A2] font-bold mr-3.5">Sort:</p>
+                  <div
+                    class="flex items-center min-w-[180px] min-h-11 pl-4 pr-[25px] bg-white border-[1px] border-input rounded-[3px] text-sm font-normal leading-5 cursor-pointer hover-border select relative whitespace-nowrap overflow-hidden"
+                  >
+                    Data created
+                    <svg class="mt-[-4px] ml-2.5" width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2 12L1.64645 11.6464L0.792893 12.5H2V12ZM13 12V12.5H13.5V12H13ZM13.3536 0.646447C13.1583 0.451184 12.8417 0.451184 12.6464 0.646447L9.46447 3.82843C9.2692 4.02369 9.2692 4.34027 9.46447 4.53553C9.65973 4.7308 9.97631 4.7308 10.1716 4.53553L13 1.70711L15.8284 4.53553C16.0237 4.7308 16.3403 4.7308 16.5355 4.53553C16.7308 4.34027 16.7308 4.02369 16.5355 3.82843L13.3536 0.646447ZM2 12.5H13V11.5H2V12.5ZM13.5 12V1H12.5V12H13.5ZM2.35355 12.3536L7.35355 7.35355L6.64645 6.64645L1.64645 11.6464L2.35355 12.3536Z"
+                        fill="black"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="bg-[#F4F4F4]">
+      <section class="bg-[#F4F4F4] pt-10 md:pt-[74px]">
         <div class="container mx-auto">
-          <p class="text-[26px] text-[#141133] font-['DM_Sans'] font-[400] leading-[45px] pt-[71px] pb-[61px]">Latest offers:</p>
-          <div class="example__inner grid grid-cols-2 gap-[13px] justify-between">
-            <div class="bg-white flex flex-col rounded-[3px] pr-[39px] max-w-[608px]">
-              <div class="flex w-full pt-[31px] pb-[32px]">  
-                <a class="pl-[37px] text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[36px] hover:opacity-[0.7] tracking-[-0.3px]" href="#">Share Extension Development for iOS and Android</a>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-[13px] justify-between">
+            <div class="bg-white flex flex-col rounded-[3px] pr-5 md:pr-[39px] max-w-[608px]">
+              <div class="flex w-full pt-5 md:pt-[31px] pb-5 md:pb-8">
+                <a class="md:h-[72px] pl-5 md:pl-[37px] text-xl md:text-3xl text-[#141133] font-bold font-dmsans md:leading-9 hover:opacity-[0.7] transition-opacity duration-300 tracking-[-0.3px] line-clamp-2" href="#"
+                  >Share Extension Development for iOS and Android</a
+                >
               </div>
-                <div class="bg-[#141133] mt-auto rounded-tr-[30px] mr-[40px] w-[100%]">
-                  <div class="container border-solid border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-[40px] pl-[28px]">
-                    <ul class="flex text-white pt-[23px] pb-[26px] gap-[27px]">
-                      <li class="text-[14px] font-[400] leading-[20px]">12.04.2023</li>
-                      <li class="text-[14px] font-[700] leading-[20px]">$1200</li>
-                      <li class="text-[14px] font-[400] leading-[20px]">12.10.2023 deadline</li>
+              <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
+                <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-[100%]">
+                  <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                    <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
+                      <li class="text-sm font-normal leading-5">12.04.2023</li>
+                      <li class="text-sm font-bold leading-5">$1200</li>
+                      <li class="text-sm font-normal leading-5">12.10.2023 deadline</li>
                     </ul>
-                    <ul class="flex text-[12px] text-[#CBFC00] font-[500] leading-[20px] gap-[14px] pb-[26px] tracking-[0.2px]">
+                    <ul class="flex flex-wrap text-xs text-[#CBFC00] font-medium leading-5 gap-3.5 pb-3.5 md:pb-6 tracking-[0.2px]">
                       <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
                       </li>
                       <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
                       </li>
                       <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
                       </li>
                       <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <p class="text-[14px] mt-[22px] ml-[37px] mb-[33px] max-w-[532px] leading-[26px] line-clamp-6">
-                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
-                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
-                </p>
-              </div>
-              <div class="bg-white flex flex-col rounded-[3px] pr-[39px] max-w-[608px]">
-                <div class="flex w-full pt-[31px] pb-[32px]">  
-                  <a class="pl-[37px] text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[36px] hover:opacity-[0.7] tracking-[-0.3px]" href="#">Creating a mobile application for booking tickets</a>
-                </div>
-                  <div class="bg-[#141133] mt-auto rounded-tr-[30px] mr-[40px] w-[100%]">
-                    <div class="container border-solid border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-[40px] pl-[28px]">
-                      <ul class="flex text-white pt-[23px] pb-[26px] gap-[27px]">
-                        <li class="text-[14px] font-[400] leading-[20px]">12.04.2023</li>
-                        <li class="text-[14px] font-[700] leading-[20px]">$1200</li>
-                        <li class="text-[14px] font-[400] leading-[20px]">12.10.2023 deadline</li>
-                      </ul>
-                      <ul class="flex text-[12px] text-[#CBFC00] font-[500] leading-[20px] gap-[14px] pb-[26px] tracking-[0.2px]">
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
-                        </li>
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
-                        </li>
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
-                        </li>
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <p class="text-[14px] mt-[22px] ml-[37px] mb-[33px] max-w-[532px] leading-[26px] line-clamp-6">
-                    Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
-                    well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
-                  </p>
-                </div>
-                <div class="bg-white flex flex-col rounded-[3px] pr-[39px] max-w-[608px]">
-                  <div class="flex w-full pt-[31px] pb-[32px]">  
-                    <a class="pl-[37px] text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[36px] hover:opacity-[0.7] tracking-[-0.3px]" href="#">VFX game development and video production</a>
-                  </div>
-                    <div class="bg-[#141133] mt-auto rounded-tr-[30px] mr-[40px] w-[100%]">
-                      <div class="container border-solid border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-[40px] pl-[28px]">
-                        <ul class="flex text-white pt-[23px] pb-[26px] gap-[27px]">
-                          <li class="text-[14px] font-[400] leading-[20px]">12.04.2023</li>
-                          <li class="text-[14px] font-[700] leading-[20px]">$1200</li>
-                          <li class="text-[14px] font-[400] leading-[20px]">12.10.2023 deadline</li>
-                        </ul>
-                        <ul class="flex text-[12px] text-[#CBFC00] font-[500] leading-[20px] gap-[14px] pb-[26px] tracking-[0.2px]">
-                          <li>
-                            <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
-                          </li>
-                          <li>
-                            <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
-                          </li>
-                          <li>
-                            <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
-                          </li>
-                          <li>
-                            <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <p class="text-[14px] mt-[22px] ml-[37px] mb-[33px] max-w-[532px] leading-[26px] line-clamp-6">
-                      Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
-                      well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
-                    </p>
-                  </div>
-                  <div class="bg-white flex flex-col rounded-[3px] pr-[39px] max-w-[608px]">
-                    <div class="flex w-full pt-[31px] pb-[32px]">  
-                      <a class="pl-[37px] text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[36px] hover:opacity-[0.7] tracking-[-0.3px]" href="#">Programming the game on Unity</a>
-                    </div>
-                      <div class="bg-[#141133] mt-auto rounded-tr-[30px] mr-[40px] w-[100%]">
-                        <div class="container border-solid border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-[40px] pl-[28px]">
-                          <ul class="flex text-white pt-[23px] pb-[26px] gap-[27px]">
-                            <li class="text-[14px] font-[400] leading-[20px]">12.04.2023</li>
-                            <li class="text-[14px] font-[700] leading-[20px]">$1200</li>
-                            <li class="text-[14px] font-[400] leading-[20px]">12.10.2023 deadline</li>
-                          </ul>
-                          <ul class="flex text-[12px] text-[#CBFC00] font-[500] leading-[20px] gap-[14px] pb-[26px] tracking-[0.2px]">
-                            <li>
-                              <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
-                            </li>
-                            <li>
-                              <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
-                            </li>
-                            <li>
-                              <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
-                            </li>
-                            <li>
-                              <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <p class="text-[14px] mt-[22px] ml-[37px] mb-[33px] max-w-[532px] leading-[26px] line-clamp-6">
-                        Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
-                        well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
-                      </p>
-                  </div>
-                <div class="bg-white flex flex-col rounded-[3px] pr-[39px] max-w-[608px]">
-                  <div class="flex w-full pt-[31px] pb-[32px]">  
-                    <a class="pl-[37px] text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[36px] hover:opacity-[0.7] tracking-[-0.3px]" href="#">Share Extension Development for iOS and Android</a>
-                  </div>
-                  <div class="bg-[#141133] mt-auto rounded-tr-[30px] mr-[40px] w-[100%]">
-                    <div class="container border-solid border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-[40px] pl-[28px]">
-                      <ul class="flex text-white pt-[23px] pb-[26px] gap-[27px]">
-                        <li class="text-[14px] font-[400] leading-[20px]">12.04.2023</li>
-                        <li class="text-[14px] font-[700] leading-[20px]">$1200</li>
-                        <li class="text-[14px] font-[400] leading-[20px]">12.10.2023 deadline</li>
-                      </ul>
-                      <ul class="flex text-[12px] text-[#CBFC00] font-[500] leading-[20px] gap-[14px] pb-[26px] tracking-[0.2px]">
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
-                        </li>
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
-                        </li>
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
-                        </li>
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <p class="text-[14px] mt-[22px] ml-[37px] mb-[33px] max-w-[532px] leading-[26px] line-clamp-6">
-                    Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
-                    well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
-                  </p>
-                </div>
-                <div class="bg-white flex flex-col rounded-[3px] pr-[39px] max-w-[608px]">
-                  <div class="flex w-full pt-[31px] pb-[32px]">  
-                    <a class="pl-[37px] text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[36px] hover:opacity-[0.7] tracking-[-0.3px]" href="#">Creating a mobile application for booking tickets</a>
-                  </div>
-                  <div class="bg-[#141133] mt-auto rounded-tr-[30px] mr-[40px] w-[100%]">
-                    <div class="container border-solid border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-[40px] pl-[28px]">
-                      <ul class="flex text-white pt-[23px] pb-[26px] gap-[27px]">
-                        <li class="text-[14px] font-[400] leading-[20px]">12.04.2023</li>
-                        <li class="text-[14px] font-[700] leading-[20px]">$1200</li>
-                        <li class="text-[14px] font-[400] leading-[20px]">12.10.2023 deadline</li>
-                      </ul>
-                      <ul class="flex text-[12px] text-[#CBFC00] font-[500] leading-[20px] gap-[14px] pb-[26px] tracking-[0.2px]">
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
-                        </li>
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
-                        </li>
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
-                        </li>
-                        <li>
-                          <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <p class="text-[14px] mt-[22px] ml-[37px] mb-[33px] max-w-[532px] leading-[26px] line-clamp-6">
-                    Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
-                    well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
-                  </p>
-                </div>
-              <div class="bg-white flex flex-col rounded-[3px] pr-[39px] max-w-[608px]">
-                <div class="flex w-full pt-[31px] pb-[32px]">  
-                  <a class="pl-[37px] text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[36px] hover:opacity-[0.7] tracking-[-0.3px]" href="#">VFX game development and video production</a>
-                </div>
-                <div class="bg-[#141133] mt-auto rounded-tr-[30px] mr-[40px] w-[100%]">
-                  <div class="container border-solid border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-[40px] pl-[28px]">
-                    <ul class="flex text-white pt-[23px] pb-[26px] gap-[27px]">
-                      <li class="text-[14px] font-[400] leading-[20px]">12.04.2023</li>
-                      <li class="text-[14px] font-[700] leading-[20px]">$1200</li>
-                      <li class="text-[14px] font-[400] leading-[20px]">12.10.2023 deadline</li>
-                    </ul>
-                    <ul class="flex text-[12px] text-[#CBFC00] font-[500] leading-[20px] gap-[14px] pb-[26px] tracking-[0.2px]">
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
-                      </li>
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
-                      </li>
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
-                      </li>
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <p class="text-[14px] mt-[22px] ml-[37px] mb-[33px] max-w-[532px] leading-[26px] line-clamp-6">
-                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
-                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
-                </p>
-              </div>
-              <div class="bg-white flex flex-col rounded-[3px] pr-[39px] max-w-[608px]">
-                <div class="flex w-full pt-[31px] pb-[32px]">  
-                  <a class="pl-[37px] text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[36px] hover:opacity-[0.7] tracking-[-0.3px]" href="#">Programming the game on Unity</a>
-                </div>
-                <div class="bg-[#141133] mt-auto rounded-tr-[30px] mr-[40px] w-[100%]">
-                  <div class="container border-solid border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-[40px] pl-[28px]">
-                    <ul class="flex text-white pt-[23px] pb-[26px] gap-[27px]">
-                      <li class="text-[14px] font-[400] leading-[20px]">12.04.2023</li>
-                      <li class="text-[14px] font-[700] leading-[20px]">$1200</li>
-                      <li class="text-[14px] font-[400] leading-[20px]">12.10.2023 deadline</li>
-                    </ul>
-                    <ul class="flex text-[12px] text-[#CBFC00] font-[500] leading-[20px] gap-[14px] pb-[26px] tracking-[0.2px]">
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
-                      </li>
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
-                      </li>
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
-                      </li>
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <p class="text-[14px] mt-[22px] ml-[37px] mb-[33px] max-w-[532px] leading-[26px] line-clamp-6">
-                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
-                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
-                </p>
-            </div>
-            <div class="bg-white flex flex-col rounded-[3px] pr-[39px] max-w-[608px]">
-              <div class="flex w-full pt-[31px] pb-[32px]">  
-                <a class="pl-[37px] text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[36px] hover:opacity-[0.7] tracking-[-0.3px]" href="#">Share Extension Development for iOS and Android</a>
-              </div>
-              <div class="bg-[#141133] mt-auto rounded-tr-[30px] mr-[40px] w-[100%]">
-                <div class="container border-solid border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-[40px] pl-[28px]">
-                  <ul class="flex text-white pt-[23px] pb-[26px] gap-[27px]">
-                    <li class="text-[14px] font-[400] leading-[20px]">12.04.2023</li>
-                    <li class="text-[14px] font-[700] leading-[20px]">$1200</li>
-                    <li class="text-[14px] font-[400] leading-[20px]">12.10.2023 deadline</li>
-                  </ul>
-                  <ul class="flex text-[12px] text-[#CBFC00] font-[500] leading-[20px] gap-[14px] pb-[26px] tracking-[0.2px]">
-                    <li>
-                      <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
-                    </li>
-                    <li>
-                      <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
-                    </li>
-                    <li>
-                      <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
-                    </li>
-                    <li>
-                      <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <p class="text-[14px] mt-[22px] ml-[37px] mb-[33px] max-w-[532px] leading-[26px] line-clamp-6">
-                Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
-                well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
-              </p>
-            </div>
-            <div class="bg-white flex flex-col rounded-[3px] pr-[39px] max-w-[608px]">
-              <div class="flex w-full pt-[31px] pb-[32px]">  
-                <a class="pl-[37px] text-[30px] text-[#141133] font-[700] font-['DM_Sans'] leading-[36px] hover:opacity-[0.7] tracking-[-0.3px]" href="#">Creating a mobile application for booking tickets</a>
-              </div>
-                <div class="bg-[#141133] mt-auto rounded-tr-[30px] mr-[40px] w-[100%]">
-                  <div class="container border-solid border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-[40px] pl-[28px]">
-                    <ul class="flex text-white pt-[23px] pb-[26px] gap-[27px]">
-                      <li class="text-[14px] font-[400] leading-[20px]">12.04.2023</li>
-                      <li class="text-[14px] font-[700] leading-[20px]">$1200</li>
-                      <li class="text-[14px] font-[400] leading-[20px]">12.10.2023 deadline</li>
-                    </ul>
-                    <ul class="flex text-[12px] text-[#CBFC00] font-[500] leading-[20px] gap-[14px] pb-[26px] tracking-[0.2px]">
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
-                      </li>
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
-                      </li>
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
-                      </li>
-                      <li>
-                        <a class="flex border border-[#CBFC00] rounded-[4px] py-[3px] px-[11px] hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <p class="text-[14px] mt-[22px] ml-[37px] mb-[33px] max-w-[532px] leading-[26px] line-clamp-6">
+                <p class="text-sm md:text-[15px] m-[15px_0_15px_20px] md:m-[22px_0_33px_37px] max-w-[532px] leading-[26px] line-clamp-6">
                   Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
                   well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
                 </p>
               </div>
             </div>
-          <div class="flex justify-center mt-[74px]">
-            <a class="flex items-center justify-center text-[16px] text-[#141133] font-[700] leading-[20px] w-[137px] h-[43px] border-[1px] border-[#141133] opacity-[0.5] rounded-[5px] hover:text-white hover:bg-[#141133]" href="#"> Load more + </a>
+            <div class="bg-white flex flex-col rounded-[3px] pr-5 md:pr-[39px] max-w-[608px]">
+              <div class="flex w-full pt-5 md:pt-[31px] pb-5 md:pb-8">
+                <a class="md:h-[72px] pl-5 md:pl-[37px] text-xl md:text-3xl text-[#141133] font-bold font-dmsans md:leading-9 hover:opacity-[0.7] transition-opacity duration-300 tracking-[-0.3] line-clamp-2" href="#"
+                  >Creating a mobile application for booking tickets</a
+                >
+              </div>
+              <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
+                <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-[100%]">
+                  <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                    <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
+                      <li class="text-sm font-normal leading-5">12.04.2023</li>
+                      <li class="text-sm font-bold leading-5">$1200</li>
+                      <li class="text-sm font-normal leading-5">12.10.2023 deadline</li>
+                    </ul>
+                    <ul class="flex flex-wrap text-xs text-[#CBFC00] font-medium leading-5 gap-3.5 pb-3.5 md:pb-6 tracking-[0.2px]">
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-sm md:text-[15px] m-[15px_0_15px_20px] md:m-[22px_0_33px_37px] max-w-[532px] leading-[26px] line-clamp-6">
+                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
+                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
+                </p>
+              </div>
+            </div>
+            <div class="bg-white flex flex-col rounded-[3px] pr-5 md:pr-[39px] max-w-[608px]">
+              <div class="flex w-full pt-5 md:pt-[31px] pb-5 md:pb-8">
+                <a class="md:h-[72px] pl-5 md:pl-[37px] text-xl md:text-3xl text-[#141133] font-bold font-dmsans md:leading-9 hover:opacity-[0.7] transition-opacity duration-300 tracking-[-0.3] line-clamp-2" href="#"
+                  >VFX game development and video production</a
+                >
+              </div>
+              <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
+                <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-[100%]">
+                  <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                    <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
+                      <li class="text-sm font-normal leading-5">12.04.2023</li>
+                      <li class="text-sm font-bold leading-5">$1200</li>
+                      <li class="text-sm font-normal leading-5">12.10.2023 deadline</li>
+                    </ul>
+                    <ul class="flex flex-wrap text-xs text-[#CBFC00] font-medium leading-5 gap-3.5 pb-3.5 md:pb-6 tracking-[0.2px]">
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-sm md:text-[15px] m-[15px_0_15px_20px] md:m-[22px_0_33px_37px] max-w-[532px] leading-[26px] line-clamp-6">
+                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
+                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
+                </p>
+              </div>
+            </div>
+            <div class="bg-white flex flex-col rounded-[3px] pr-5 md:pr-[39px] max-w-[608px]">
+              <div class="flex w-full pt-5 md:pt-[31px] pb-5 md:pb-8">
+                <a class="md:h-[72px] pl-5 md:pl-[37px] text-xl md:text-3xl text-[#141133] font-bold font-dmsans md:leading-9 hover:opacity-[0.7] transition-opacity duration-300 line-clamp-2tracking-[-0.3px]" href="#"
+                  >Programming the game on Unity</a
+                >
+              </div>
+              <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
+                <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-[100%]">
+                  <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                    <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
+                      <li class="text-sm font-normal leading-5">12.04.2023</li>
+                      <li class="text-sm font-bold leading-5">$1200</li>
+                      <li class="text-sm font-normal leading-5">12.10.2023 deadline</li>
+                    </ul>
+                    <ul class="flex flex-wrap text-xs text-[#CBFC00] font-medium leading-5 gap-3.5 pb-3.5 md:pb-6 tracking-[0.2px]">
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-sm md:text-[15px] m-[15px_0_15px_20px] md:m-[22px_0_33px_37px] md:mt-[22px] md:ml-[3 px] md:mb-[33px] max-w-[532px] leading-[26px] line-clamp-6">
+                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
+                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
+                </p>
+              </div>
+            </div>
+            <div class="bg-white flex flex-col rounded-[3px] pr-5 md:pr-[39px] max-w-[608px]">
+              <div class="flex w-full pt-5 md:pt-[31px] pb-5 md:pb-8">
+                <a class="md:h-[72px] pl-5 md:pl-[37px] text-xl md:text-3xl text-[#141133] font-bold font-dmsans md:leading-9 hover:opacity-[0.7] transition-opacity duration-300 tracking-[-0.3] line-clamp-2" href="#"
+                  >Share Extension Development for iOS and Android</a
+                >
+              </div>
+              <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
+                <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-[100%]">
+                  <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                    <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
+                      <li class="text-sm font-normal leading-5">12.04.2023</li>
+                      <li class="text-sm font-bold leading-5">$1200</li>
+                      <li class="text-sm font-normal leading-5">12.10.2023 deadline</li>
+                    </ul>
+                    <ul class="flex flex-wrap text-xs text-[#CBFC00] font-medium leading-5 gap-3.5 pb-3.5 md:pb-6 tracking-[0.2px]">
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-sm md:text-[15px] m-[15px_0_15px_20px] md:m-[22px_0_33px_37px] max-w-[532px] leading-[26px] line-clamp-6">
+                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
+                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
+                </p>
+              </div>
+            </div>
+            <div class="bg-white flex flex-col rounded-[3px] pr-5 md:pr-[39px] max-w-[608px]">
+              <div class="flex w-full pt-5 md:pt-[31px] pb-5 md:pb-8">
+                <a class="md:h-[72px] pl-5 md:pl-[37px] text-xl md:text-3xl text-[#141133] font-bold font-dmsans md:leading-9 hover:opacity-[0.7] transition-opacity duration-300 tracking-[-0.3] line-clamp-2" href="#"
+                  >Creating a mobile application for booking tickets</a
+                >
+              </div>
+              <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
+                <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-[100%]">
+                  <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                    <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
+                      <li class="text-sm font-normal leading-5">12.04.2023</li>
+                      <li class="text-sm font-bold leading-5">$1200</li>
+                      <li class="text-sm font-normal leading-5">12.10.2023 deadline</li>
+                    </ul>
+                    <ul class="flex flex-wrap text-xs text-[#CBFC00] font-medium leading-5 gap-3.5 pb-3.5 md:pb-6 tracking-[0.2px]">
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-sm md:text-[15px] m-[15px_0_15px_20px] md:m-[22px_0_33px_37px] max-w-[532px] leading-[26px] line-clamp-6">
+                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
+                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
+                </p>
+              </div>
+            </div>
+            <div class="bg-white flex flex-col rounded-[3px] pr-5 md:pr-[39px] max-w-[608px]">
+              <div class="flex w-full pt-5 md:pt-[31px] pb-5 md:pb-8">
+                <a class="md:h-[72px] pl-5 md:pl-[37px] text-xl md:text-3xl text-[#141133] font-bold font-dmsans md:leading-9 hover:opacity-[0.7] transition-opacity duration-300 tracking-[-0.3] line-clamp-2" href="#"
+                  >VFX game development and video production</a
+                >
+              </div>
+              <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
+                <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-[100%]">
+                  <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                    <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
+                      <li class="text-sm font-normal leading-5">12.04.2023</li>
+                      <li class="text-sm font-bold leading-5">$1200</li>
+                      <li class="text-sm font-normal leading-5">12.10.2023 deadline</li>
+                    </ul>
+                    <ul class="flex flex-wrap text-xs text-[#CBFC00] font-medium leading-5 gap-3.5 pb-3.5 md:pb-6 tracking-[0.2px]">
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-sm md:text-[15px] m-[15px_0_15px_20px] md:m-[22px_0_33px_37px] max-w-[532px] leading-[26px] line-clamp-6">
+                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
+                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
+                </p>
+              </div>
+            </div>
+            <div class="bg-white flex flex-col rounded-[3px] pr-5 md:pr-[39px] max-w-[608px]">
+              <div class="flex w-full pt-5 md:pt-[31px] pb-5 md:pb-8">
+                <a class="md:h-[72px] pl-5 md:pl-[37px] text-xl md:text-3xl text-[#141133] font-bold font-dmsans md:leading-9 hover:opacity-[0.7] transition-opacity duration-300 tracking-[-0.3] line-clamp-2" href="#"
+                  >Programming the game on Unity</a
+                >
+              </div>
+              <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
+                <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-[100%]">
+                  <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                    <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
+                      <li class="text-sm font-normal leading-5">12.04.2023</li>
+                      <li class="text-sm font-bold leading-5">$1200</li>
+                      <li class="text-sm font-normal leading-5">12.10.2023 deadline</li>
+                    </ul>
+                    <ul class="flex flex-wrap text-xs text-[#CBFC00] font-medium leading-5 gap-3.5 pb-3.5 md:pb-6 tracking-[0.2px]">
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-sm md:text-[15px] m-[15px_0_15px_20px] md:m-[22px_0_33px_37px] max-w-[532px] leading-[26px] line-clamp-6">
+                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
+                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
+                </p>
+              </div>
+            </div>
+            <div class="bg-white flex flex-col rounded-[3px] pr-5 md:pr-[39px] max-w-[608px]">
+              <div class="flex w-full pt-5 md:pt-[31px] pb-5 md:pb-8">
+                <a class="md:h-[72px] pl-5 md:pl-[37px] text-xl md:text-3xl text-[#141133] font-bold font-dmsans md:leading-9 hover:opacity-[0.7] transition-opacity duration-300 tracking-[-0.3px] line-clamp-2" href="#"
+                  >Share Extension Development for iOS and Android</a
+                >
+              </div>
+              <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
+                <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-[100%]">
+                  <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                    <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
+                      <li class="text-sm font-normal leading-5">12.04.2023</li>
+                      <li class="text-sm font-bold leading-5">$1200</li>
+                      <li class="text-sm font-normal leading-5">12.10.2023 deadline</li>
+                    </ul>
+                    <ul class="flex flex-wrap text-xs text-[#CBFC00] font-medium leading-5 gap-3.5 pb-3.5 md:pb-6 tracking-[0.2px]">
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-[11px] ho2.5xt-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-[11px] ho2.5xt-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-[11px] ho2.5xt-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-[11px] ho2.5xt-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-sm md:text-[15px] m-[15px_0_15px_20px] md:m-[22px_0_33px_37px] max-w-[532px] leading-[26px] line-clamp-6">
+                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
+                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
+                </p>
+              </div>
+            </div>
+            <div class="bg-white flex flex-col rounded-[3px] pr-5 md:pr-[39px] max-w-[608px]">
+              <div class="flex w-full pt-5 md:pt-[31px] pb-5 md:pb-8">
+                <a class="md:h-[72px] pl-5 md:pl-[37px] text-xl md:text-3xl text-[#141133] font-bold font-dmsans md:leading-9 hover:opacity-[0.7] transition-opacity duration-300 tracking-[-0.3px] line-clamp-2" href="#"
+                  >Creating a mobile application for booking tickets</a
+                >
+              </div>
+              <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
+                <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-[100%]">
+                  <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                    <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
+                      <li class="text-sm font-normal leading-5">12.04.2023</li>
+                      <li class="text-sm font-bold leading-5">$1200</li>
+                      <li class="text-sm font-normal leading-5">12.10.2023 deadline</li>
+                    </ul>
+                    <ul class="flex flex-wrap text-xs text-[#CBFC00] font-medium leading-5 gap-3.5 pb-3.5 md:pb-6 tracking-[0.2px]">
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Java Script </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> GraphQL </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Coding </a>
+                      </li>
+                      <li>
+                        <a class="flex border border-[#CBFC00] rounded-[4px] py-1 px-2.5 hover:text-[#141133] hover:bg-[#CBFC00]" href="#"> Programming </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="text-sm md:text-[15px] m-[15px_0_15px_20px] md:m-[22px_0_33px_37px] max-w-[532px] leading-[26px] line-clamp-6">
+                  Our company is looking for experienced developers who can create an intuitive and effective mobile application for food delivery. The application must have the functions of ordering, payment and tracking of delivery, as
+                  well as integration with external accounting and inventory systems. Requires experience with mobile platforms such as Android and iOS...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center mt-[43px] md:mt-[74px]">
+            <a class="flex items-center justify-center text-[16px] text-[#141133] font-bold leading-5 w-[137px] h-[43px] border-[1px] border-[#141133] opacity-[0.5] rounded-[5px] hover:text-white hover:bg-[#141133] duration-300" href="#">
+              Load more +
+            </a>
           </div>
         </div>
       </section>
     </main>
-    <footer class="pt-[121px] pb-[23px] bg-[#F4F4F4]">
+    <footer class="pt-[60px] md:pt-[121px] pb-[23px] bg-[#F4F4F4]">
       <div class="container mx-auto">
         <div class="border border-[#CECECE] rounded-[3px]">
-          <div class="flex justify-between">
-            <div class="flex gap-[42px] border-r border-[#CECECE] py-[16px] pl-[23px] pr-[37px]">
-              <a class="text-[14px] font-[700] leading-[26px]" href="#">Softskill.ai</a>
-              <p class="text-[14px] font-[400] leading-[26px]">All rights reserved © 2023</p>
-            </div>
-            <div class="place-self-center pr-[19px]">
-              <address class="text-[14px] font-[400] not-italic leading-[26px]">Softskill OU, reg. 16356331 Address: Narva mnt 5, Tallinn, 10117, Estonia</address>
-            </div>
+          <div class="md:px-[23px] px-6 py-[13px] md:px-0 md:py-0 w-full flex flex-col md:flex-row gap-1 md:gap-[42px]">
+            <p class="text-sm font-bold leading-[26px] md:py-4" href="#">Softskill.ai</p>
+            <p class="text-sm font-normal leading-[26px] md:py-4 md:pr-[37px] md:border-r md:border-[#CECECE]">All rights reserved © 2023</p>
+            <address class="md:text-end grow text-sm font-normal not-italic leading-[26px] md:py-4">Softskill OU, reg. 16356331 Address: Narva mnt 5, Tallinn, 10117, Estonia</address>
           </div>
           <div class="border-t border-[#CECECE] px-[23px] py-[13px]">
-            <ul class="flex gap-[41px] text-[14px] font-[600] leading-[26px]">
+            <ul class="flex flex-col md:flex-row gap-1 md:gap-[41px] text-sm font-semibold leading-[26px]">
               <a href="#">Terms of use</a>
               <a href="#">Subcontractor offer</a>
               <a href="#">Customer Agreement</a>

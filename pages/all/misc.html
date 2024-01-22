@@ -7,37 +7,44 @@
     <link rel="stylesheet" href="../../css/custom.css" />
     <title>Nommad</title>
   </head>
-
   <body>
     <header class="header bg-[#141133] h-[65px] flex items-center bg-[#141133] text-white font-medium">
       <div class="container mx-auto">
-        <div class="grid grid-cols-3">
-          <div>
+        <div class="grid grid-cols-[1fr_auto_auto] md:grid-cols-[1fr_auto_1fr] gap-x-5 md:gap-x-0">
+          <div class="flex items-center">
             <a href="" class="inline-block">
               <img class="header__logo-img" src="../../media/icon/logo.svg" alt="BILLINGER" />
             </a>
           </div>
-          <nav class="nav mx-auto">
-            <ul class="header__nav-menu flex gap-[33px] place-self-center text-[14px] font-[500]">
-              <li class="header__list-item">
+          <div class="flex md:hidden text-sm  place-self-end mb-auto">
+            <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00]" href="#">Sign up</a>
+          </div>
+          <div class="flex flex-col md:hidden gap-y-1 place-self-end mb-2.5 pr-2.5">
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+          </div>
+          <nav class="nav hidden md:block mx-auto pr-[69px]">
+            <ul class="header__nav-menu flex gap-[33px] place-self-center text-sm font-medium leading-[19px]">
+              <li>
                 <a class="hover:text-[#CBFC00]" href="#">Company's</a>
               </li>
-              <li class="header__list-item">
+              <li>
                 <a class="hover:text-[#CBFC00]" href="#">Freelancers</a>
               </li>
-              <li class="header__list-item">
+              <li>
                 <a class="hover:text-[#CBFC00]" href="#">Work</a>
               </li>
             </ul>
           </nav>
-          <div class="header__inner flex place-self-end">
-            <div class="flex header__laguage mr-[100px] gap-x-[25px] text-[14px]">
-              <a class="hover:opacity-[0.7]" href="#">en</a>
-              <a class="text-[#FFFFFF4D]" href="#">ru</a>
+          <div class="hidden md:flex place-self-end">
+            <div class="flex header__laguage mr-[100px] gap-x-[25px] text-sm">
+              <a class="hover:opacity-[0.7] leading-[19px]" href="#">en</a>
+              <a class="text-[#FFFFFF4D] leading-[19px]" href="#">ru</a>
             </div>
-            <div class="flex text-[14px] gap-[32px]">
-              <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00]" href="#">Sign up</a>
-              <a class="header__button-enter hover:text-[#CBFC00]" href="#">Sign in</a>
+            <div class="flex text-sm gap-[32px]">
+              <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00] leading-[19px]" href="#">Sign up</a>
+              <a class="header__button-enter hover:text-[#CBFC00] leading-[19px]" href="#">Sign in</a>
             </div>
           </div>
         </div>
@@ -45,7 +52,7 @@
     </header>
     <section>
       <div class="container mx-auto !max-w-[1230px] pt-[67px]">
-        <div class="flex flex-col gap-[43px]">
+        <div class="flex flex-col gap-5 md:gap-[43px] ml-5 md:ml-0">
           <div class="flex gap-[8px]">
             <a class="text-[14px] text-[#909090] font-[400] leading-[26px]" href="#"> Main </a>
             <span class="text-[14px] text-[#424242] font-[400] leading-[26px]">></span>
@@ -55,75 +62,71 @@
         </div>
       </div>
     </section>
-    <section class="pt-[82px]">
+    <section class="pt-10 md:pt-[82px]">
       <div class="container mx-auto">
         <div class="misc-content">
-          <h4 class="text-[17px] font-[700] leading-[24px] pb-[5px]">What Are Cookies</h4>
-          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-[20px]">
-            As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page
-            describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this
-            may downgrade or 'break' certain elements of the sites functionality.
+          <h4 class="text-[17px] font-[700] leading-[24px] pb-2.5 md:pb-[5px]">What Are Cookies</h4>
+          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-2.5 md:py-5">
+            As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we
+            use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.
           </p>
 
-          <h4 class="text-[17px] font-[700] leading-[24px] pb-[5px]"> How We Use Cookies</h4>
+          <h4 class="text-[17px] font-[700] leading-[24px] pb-[5px]">How We Use Cookies</h4>
 
-          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-[20px]">
-            We use cookies for a variety of reasons detailed below. Unfortunately in most cases there are no industry standard options for disabling cookies without completely disabling the
-            functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a
-            service that you use.
+          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-2.5 md:py-5">
+            We use cookies for a variety of reasons detailed below. Unfortunately in most cases there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site.
+            It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use.
           </p>
 
-          <h4 class="text-[17px] font-[700] leading-[24px] pb-[5px]"> Disabling Cookies</h4>
+          <h4 class="text-[17px] font-[700] leading-[24px] pb-[5px]">Disabling Cookies</h4>
 
-          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-[20px]">
-            You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality
-            of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of the this site. Therefore it is recommended
-            that you do not disable cookies.
+          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-2.5 md:py-5">
+            You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you
+            visit. Disabling cookies will usually result in also disabling certain functionality and features of the this site. Therefore it is recommended that you do not disable cookies.
           </p>
 
           <h3 class="text-[24px] leading-[24px] pt-[20px] pb-[40px]">The Cookies We Set</h3>
 
-          <h4 class="text-[17px] font-[700] leading-[24px] pb-[5px]"> Forms related cookies</h4>
+          <h4 class="text-[17px] font-[700] leading-[24px] pb-[5px]">Forms related cookies</h4>
 
-          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-[20px]">When you submit data to through a form such as those found on contact pages or comment forms cookies may be set to remember your user details for future correspondence.</p>
-
-          <h4 class="text-[17px] font-[700] leading-[24px] pb-[5px]"> Third Party Cookies</h4>
-
-          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-[20px]">In some special cases we also use cookies provided by trusted third parties. The following section details which third party cookies you might encounter through this site.</p>
-
-          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-[20px]">
-            This site uses Google Analytics which is one of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site and ways that we can improve
-            your experience. These cookies may track things such as how long you spend on the site and the pages that you visit so we can continue to produce engaging content. For more information on
-            Google Analytics cookies, see the official Google Analytics page.<br />
-            From time to time we test new features and make subtle changes to the way that the site is delivered. When we are still testing new features these cookies may be used to ensure that you
-            receive a consistent experience whilst on the site whilst ensuring we understand which optimisations our users appreciate the most.
+          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-2.5 md:py-5">
+            When you submit data to through a form such as those found on contact pages or comment forms cookies may be set to remember your user details for future correspondence.
           </p>
 
-          <h4 class="text-[17px] font-[700] leading-[24px] pb-[5px]"> More Information</h4>
+          <h4 class="text-[17px] font-[700] leading-[24px] pb-[5px]">Third Party Cookies</h4>
 
-          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-[20px]">
-            Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren't sure whether you need or not it's usually safer to leave cookies enabled
-            in case it does interact with one of the features you use on our site.
+          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-2.5 md:py-5">
+            In some special cases we also use cookies provided by trusted third parties. The following section details which third party cookies you might encounter through this site.
+          </p>
+
+          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-2.5 md:py-5">
+            This site uses Google Analytics which is one of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site and ways that we can improve your experience. These cookies may
+            track things such as how long you spend on the site and the pages that you visit so we can continue to produce engaging content. For more information on Google Analytics cookies, see the official Google Analytics page.<br />
+            From time to time we test new features and make subtle changes to the way that the site is delivered. When we are still testing new features these cookies may be used to ensure that you receive a consistent experience whilst on
+            the site whilst ensuring we understand which optimisations our users appreciate the most.
+          </p>
+
+          <h4 class="text-[17px] font-[700] leading-[24px] pb-[5px]">More Information</h4>
+
+          <p class="text-[16px] leading-[27px] tracking-[0.16px] py-2.5 md:py-5">
+            Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren't sure whether you need or not it's usually safer to leave cookies enabled in case it does interact with one of the
+            features you use on our site.
             <br />
             However if you are still looking for more information then you can contact us through one of our preferred contact methods:
           </p>
         </div>
       </div>
     </section>
-    <footer class="pt-[121px] pb-[23px]">
-      <div class="container !max-w-[1230px] mx-auto">
+    <footer class="pt-[60px] md:pt-[121px] pb-[23px] bg-[#F4F4F4]">
+      <div class="container mx-auto">
         <div class="border border-[#CECECE] rounded-[3px]">
-          <div class="flex justify-between">
-            <div class="flex gap-[42px] border-r border-[#CECECE] py-[16px] pl-[23px] pr-[37px]">
-              <a class="text-[14px] font-[700] leading-[26px]" href="#">Softskill.ai</a>
-              <p class="text-[14px] font-[400] leading-[26px]">All rights reserved © 2023</p>
-            </div>
-            <div class="place-self-center pr-[19px]">
-              <address class="text-[14px] font-[400] not-italic leading-[26px]">Softskill OU, reg. 16356331 Address: Narva mnt 5, Tallinn, 10117, Estonia</address>
-            </div>
+          <div class="md:px-[23px] px-6 py-[13px] md:px-0 md:py-0 w-full flex flex-col md:flex-row gap-1 md:gap-[42px]">
+            <p class="text-sm font-bold leading-[26px] md:py-4" href="#">Softskill.ai</p>
+            <p class="text-sm font-normal leading-[26px] md:py-4 md:pr-[37px] md:border-r md:border-[#CECECE]">All rights reserved © 2023</p>
+            <address class="md:text-end grow text-sm font-normal not-italic leading-[26px] md:py-4">Softskill OU, reg. 16356331 Address: Narva mnt 5, Tallinn, 10117, Estonia</address>
           </div>
           <div class="border-t border-[#CECECE] px-[23px] py-[13px]">
-            <ul class="flex gap-[41px] text-[14px] font-[600] leading-[26px]">
+            <ul class="flex flex-col md:flex-row gap-1 md:gap-[41px] text-sm font-semibold leading-[26px]">
               <a href="#">Terms of use</a>
               <a href="#">Subcontractor offer</a>
               <a href="#">Customer Agreement</a>

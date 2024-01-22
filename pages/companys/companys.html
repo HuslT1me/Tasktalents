@@ -7,37 +7,44 @@
     <link rel="stylesheet" href="../../css/custom.css" />
     <title>Nommad</title>
   </head>
-
   <body>
     <header class="header bg-[#141133] h-[65px] flex items-center bg-[#141133] text-white font-medium">
       <div class="container mx-auto">
-        <div class="grid grid-cols-3">
-          <div>
+        <div class="grid grid-cols-[1fr_auto_auto] md:grid-cols-[1fr_auto_1fr] gap-x-5 md:gap-x-0">
+          <div class="flex items-center">
             <a href="" class="inline-block">
               <img class="header__logo-img" src="../../media/icon/logo.svg" alt="BILLINGER" />
             </a>
           </div>
-          <nav class="nav mx-auto">
-            <ul class="header__nav-menu flex gap-[33px] place-self-center text-[14px] font-[500]">
-              <li class="header__list-item">
+          <div class="flex md:hidden text-sm place-self-end mb-auto">
+            <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00]" href="#">Sign up</a>
+          </div>
+          <div class="flex flex-col md:hidden gap-y-1 place-self-end mb-2.5 pr-2.5">
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+          </div>
+          <nav class="nav hidden md:block mx-auto pr-[69px]">
+            <ul class="header__nav-menu flex gap-[33px] place-self-center text-sm font-medium leading-[19px]">
+              <li>
                 <a class="hover:text-[#CBFC00]" href="#">Company's</a>
               </li>
-              <li class="header__list-item">
+              <li>
                 <a class="hover:text-[#CBFC00]" href="#">Freelancers</a>
               </li>
-              <li class="header__list-item">
+              <li>
                 <a class="hover:text-[#CBFC00]" href="#">Work</a>
               </li>
             </ul>
           </nav>
-          <div class="header__inner flex place-self-end">
-            <div class="flex header__laguage mr-[100px] gap-x-[25px] text-[14px]">
-              <a class="hover:opacity-[0.7]" href="#">en</a>
-              <a class="text-[#FFFFFF4D]" href="#">ru</a>
+          <div class="hidden md:flex place-self-end">
+            <div class="flex header__laguage mr-[100px] gap-x-[25px] text-sm">
+              <a class="hover:opacity-[0.7] leading-[19px]" href="#">en</a>
+              <a class="text-[#FFFFFF4D] leading-[19px]" href="#">ru</a>
             </div>
-            <div class="flex text-[14px] gap-[32px]">
-              <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00]" href="#">Sign up</a>
-              <a class="header__button-enter hover:text-[#CBFC00]" href="#">Sign in</a>
+            <div class="flex text-sm gap-[32px]">
+              <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00] leading-[19px]" href="#">Sign up</a>
+              <a class="header__button-enter hover:text-[#CBFC00] leading-[19px]" href="#">Sign in</a>
             </div>
           </div>
         </div>
@@ -47,73 +54,133 @@
       <!--Прокинул, пока нет адаптива-->
       <section class="bg-[#141133] overflow-hidden line-horizontal-company relative">
         <div class="container bg-[#141133] relative line-vertical line-vertical-right mx-auto z-[5]">
-          <div class="grid grid-cols-2">
-            <div class="max-w-[455px] ml-[73px]">
-              <h1 class="text-[55px] font-[600] tracking-[-1.2px] leading-[65px] text-white mt-[67px] font-['DM_Sans']">Publish your tasks and get professional offers today</h1>
-              <a class="button-join text-[20px] text-[#CBFC00] mt-[70px] font-['DM_Sans'] border border-[#CBFC00] py-[17px] px-[26px] rounded-[40px] inline-block leading-none hover:bg-[#CBFC00] hover:text-[#141133]" href="#">Join as a Company</a>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="md:max-w-[455px] md:ml-[73px]">
+              <h1 class="title-clamp w-full font-semibold tracking-[-1.2px] leading-[50px] leading-[50px] md:leading-[65px] text-white mt-[30px] md:mt-[67px] font-dmsans">Publish your tasks and get professional offers today</h1>
+              <div class="mt-10 md:mt-[57px] flex items-start">
+                <a
+                  class="flex items-center justify-center px-[26px] h-[56px] button-join after:hidden md:after:block text-lg md:text-xl text-[#CBFC00] font-dmsans border border-[#CBFC00] rounded-[40px] inline-block leading-none hover:bg-[#CBFC00] hover:text-[#141133] duration-300"
+                  href="#"
+                >
+                  Join as a Company
+                </a>
+              </div>
             </div>
-            <div class="photo-dec place-self-end">
-              <img class="photo-decoration rounded-[3px] w-[535px] h-[621px]" src="../../media/companys/header-companys.webp" alt="" />
+            <div class="photo-dec relative z-[6] md:place-self-end">
+              <img
+                class="photo-decoration rounded-[3px] w-full md:w-[535px] max-h-[495px] md:max-h-[100%] h-[100vw] md:h-full md:h-[621px] object-cover object-[center_center]"
+                src="../../media/companys/header-companys.webp"
+                srcset="../../media/companys/header-companys_hd.webp x2"
+                alt=""
+              />
             </div>
           </div>
         </div>
       </section>
       <section class="category-links bg-[#141133]">
-        <div class="container relative line-vertical line-vertical-right mx-auto pt-[12px] pb-[121px]">
-          <div class="flex pb-[121px]">
-            <p class="writing-mode text-[17px] font-[300] text-[#CBFC00] inline-block self-start px-[30px] leading-none">Choose a task category:</p>
-            <div class="grid grid-rows-[172px_172px] grid-cols-[1fr_1fr_262px_262px] gap-[12px] w-full">
-              <article class="row-span-2 bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-[22px] text-black font-[700] leading-[28px] capitalize font-['DM_Sans'] pl-[30px] pt-[30px] max-w-[240px]" href="#"> Programming & Development </a>
-                <a class="ml-auto" href="#"><img src="../../media/category/icon1.webp" alt="" /></a>
+        <div class="container relative line-vertical line-vertical-right mx-auto md:pt-[12px] md:pb-[121px]">
+          <div class="flex flex-col md:flex-row pb-[60px] md:pb-[124px]">
+            <p class="writing-mode text-[17px] font-light text-[#CBFC00] inline-block self-start p-[60px_0_30px] md:p-[0_30px_0] leading-none tracking-[0.68px]">Choose a task category:</p>
+            <div class="grid grid-cols-1 grid-rows-[repeat(6,_206px)] grid-flow-row md:grid-rows-[172px_172px] md:grid-cols-[1fr_1fr_262px_262px] gap-3 w-full z-[10]">
+              <article class="overflow-hidden md:row-span-2 bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
+                <a class="text-xl md:text-[22px] text-black font-bold leading-[26px] tracking-[-0.44px] pt-[18px] md:pt-[26px] capitalize font-dmsans px-5 md:pl-[30px] md:max-w-[240px]" href="#"> Programming & Development </a>
+                <a class="ml-auto max-w-[261px] max-h-[219px]" href="#">
+                  <img class="w-auto h-full" src="../../media/category/icon1.webp" srcset="../../media/category/icon1_hd.webp x2" alt="" />
+                </a>
               </article>
-              <article class="row-span-2 bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-[22px] text-black font-[700] leading-[28px] capitalize font-['DM_Sans'] pl-[30px] pt-[30px] max-w-[240px]" href="#"> Design / Branding & Creativity </a>
-                <a class="ml-auto" href="#"><img src="../../media/category/icon2.webp" alt="" /></a>
-              </article>
-              <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-[18px] text-black font-[700] leading-[24px] capitalize font-['DM_Sans'] mt-[20px] ml-[20px]" href="#"> SEO, SMM, IT Marketing </a>
-                <a class="ml-auto" href="#"><img src="../../media/category/icon3.webp" alt="" /></a>
+              <article class="overflow-hidden md:row-span-2 bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
+                <a class="text-xl md:text-[22px] text-black font-bold leading-[26px] tracking-[-0.44px] pt-[18px] md:pt-[26px] capitalize font-dmsans px-5 md:pl-[30px] md:max-w-[240px]" href="#"> Design / Branding & Creativity </a>
+                <a class="ml-auto max-w-[252px] max-h-[206px] w-full" href="#"><img class="w-full h-full" src="../../media/category/icon2.webp" srcset="../../media/category/icon2_hd.webp x2" alt="" /></a>
               </article>
               <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-[18px] text-black font-[700] leading-[24px] capitalize font-['DM_Sans'] mt-[20px] ml-[20px]" href="#"> Copyrights, Translation </a>
-                <a class="ml-auto" href="#"><img src="../../media/category/icon3.webp" alt="" /></a>
+                <a class="text-xl md:text-lg text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans pt-4 px-5" href="#"> SEO, SMM, IT Marketing </a>
+                <a class="ml-auto max-w-[150px] h-auto md:max-w-[132px] md:max-h-[139px] mr-[15px] w-full" href="#"
+                  ><img class="w-full h-full" src="../../media/category/icon3.webp" srcset="../../media/category/icon3_hd.webp x2" alt=""
+                /></a>
               </article>
               <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-[18px] text-black font-[700] leading-[24px] capitalize font-['DM_Sans'] mt-[20px] ml-[20px] max-w-[213px]" href="#"> IT Administration / DEVOPS and Support </a>
-                <a class="ml-auto" href="#"><img src="../../media/category/icon4.webp" alt="" /></a>
+                <a class="text-xl md:text-lg text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans pt-4 px-5" href="#"> Copyrights, Translation </a>
+                <a class="ml-auto max-w-[150px] h-auto md:max-w-[132px] md:max-h-[139px] mr-[15px] w-full" href="#"
+                  ><img class="w-full h-full" src="../../media/category/icon3.webp" srcset="../../media/category/icon3_hd.webp x2" alt=""
+                /></a>
               </article>
               <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-[18px] text-black font-[700] leading-[24px] capitalize font-['DM_Sans'] mt-[20px] ml-[20px]" href="#"> Blockchain & Smart Contracts / AI </a>
-                <a class="ml-auto" href="#"><img src="../../media/category/icon4.webp" alt="" /></a>
+                <a class="text-xl md:text-lg text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans pt-[15px] px-5 w-full" href="#"> IT Administration / DEVOPS and Support </a>
+                <a class="ml-auto max-w-[200px] h-auto md:max-w-[161px] md:max-h-[89px] w-full" href="#"><img class="w-full h-full" src="../../media/category/icon4.webp" srcset="../../media/category/icon4_hd.webp x2" alt="" /></a>
+              </article>
+              <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
+                <a class="text-xl md:text-lg text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans pt-[15px] px-5" href="#"> Blockchain & Smart Contracts / AI </a>
+                <a class="ml-auto max-w-[200px] h-auto md:max-w-[161px] md:max-h-[89px] w-full" href="#"><img class="w-full h-full" src="../../media/category/icon4.webp" srcset="../../media/category/icon4_hd.webp x2" alt="" /></a>
               </article>
             </div>
           </div>
-          <div class="example__inner flex justify-between">
-            <div class="bg-[#CBFC00] rounded-tr-[3px] pt-[42px] pl-[42px] pb-[50px] min-w-[481px]">
-              <p class="text-[45px] text-[#141133] font-[700] font-['DM_Sans'] leading-[55px] max-w-[350px]">Discover our freelancers catalog:</p>
+          <div class="grid grid-cols-1 md:grid-cols-[481px_1fr] w-full">
+            <div class="bg-[#CBFC00] rounded-tr-[3px] p-[17px_0_25px_21px] md:p-[34px_0_50px_42px] max-h-[234px]">
+              <p class="text-[35px] md:text-[45px] text-[#141133] font-bold font-dmsans leading-10 md:leading-[55px] max-w-[350px] tracking-[-0.9px]">Discover our freelancers catalog:</p>
             </div>
-            <div class="flex items-center relative">
-              <div class="absolute left-[-800px] bottom-[90px] z-[2]">
-                <img class="rounded-[100px] max-h-[102px] max-w-[102px]" src="../../media/avatars/avatar-01.webp" alt="" />
+            <div class="h-[230px] md:h-full relative md:mr-[15px]">
+              <div class="absolute top-[50%] left-[5%] md:left-0 -translate-x-1/2 -translate-y-1/2 z-[2]">
+                <a href="#">
+                  <img
+                    class="shadow-avatar rounded-[100px] h-[51px] md:h-[102px] w-[51px] md:w-[102px] object-cover object-[center_center] hover:scale-[1.1] transitions duration-400 easy-in-out"
+                    src="../../media/avatars/avatar-01.webp"
+                    alt=""
+                  />
+                </a>
               </div>
-              <div class="absolute left-[-720px] bottom-[80px] z-[3]">
-                <img class="rounded-[100px] max-h-[132px] max-w-[132px]" src="../../media/avatars/avatar-02.webp" alt="" />
+              <div class="absolute top-[50%] left-[18%] md:left-[12.5%] -translate-x-1/2 -translate-y-1/2 z-[3]">
+                <a href="#">
+                  <img
+                    class="shadow-avatar rounded-[100px] h-[66px] md:h-[132px] w-[66px] md:w-[132px] object-cover object-[center_center] hover:scale-[1.1] transitions duration-400 easy-in-out"
+                    src="../../media/avatars/avatar-02.webp"
+                    alt=""
+                  />
+                </a>
               </div>
-              <div class="absolute left-[-610px] bottom-[70px] z-[4]">
-                <img class="rounded-[100px] max-h-[154px] max-w-[154px]" src="../../media/avatars/avatar-03.webp" alt="" />
+              <div class="absolute top-[50%] left-[33%] md:left-[29%] -translate-x-1/2 -translate-y-1/2 z-[4]">
+                <a href="#">
+                  <img
+                    class="shadow-avatar rounded-[100px] h-[77px] md:h-[154px] w-[77px] md:w-[154px] object-cover object-[center_center] hover:scale-[1.1] transitions duration-400 easy-in-out"
+                    src="../../media/avatars/avatar-03.webp"
+                    alt=""
+                  />
+                </a>
               </div>
-              <div class="absolute left-[-490px] bottom-[60px] z-[5]">
-                <img class="rounded-[100px] max-h-[180px] max-w-[180px]" src="../../media/avatars/avatar-04.webp" alt="" />
+              <div class="absolute top-[50%] left-[50%] md:left-[47%] -translate-x-1/2 -translate-y-1/2 z-[5]">
+                <a href="">
+                  <img
+                    class="shadow-avatar rounded-[100px] h-[90px] md:h-[180px] w-[90px] md:w-[180px] object-cover object-[center_center] hover:scale-[1.1] transitions duration-400 easy-in-out"
+                    src="../../media/avatars/avatar-04.webp"
+                    alt=""
+                  />
+                </a>
               </div>
-              <div class="absolute right-[185px] bottom-[70px] z-[4]">
-                <img class="rounded-[100px] max-h-[154px] max-w-[154px]" src="../../media/avatars/avatar-05.webp" alt="" />
+              <div class="absolute top-[50%] left-[67%] md:left-[65.6%] -translate-x-1/2 -translate-y-1/2 z-[4]">
+                <a href="#">
+                  <img
+                    class="shadow-avatar rounded-[100px] h-[77px] md:h-[154px] w-[77px] md:w-[154px] object-cover object-[center_center] hover:scale-[1.1] transitions duration-400 easy-in-out"
+                    src="../../media/avatars/avatar-05.webp"
+                    alt=""
+                  />
+                </a>
               </div>
-              <div class="absolute right-[75px] bottom-[80px] z-[3]">
-                <img class="rounded-[100px] max-h-[132px] max-w-[132px]" src="../../media/avatars/avatar-06.webp" alt="" />
+              <div class="absolute top-[50%] left-[82%] md:left-[82.2%] -translate-x-1/2 -translate-y-1/2 z-[3]">
+                <a href="#">
+                  <img
+                    class="shadow-avatar rounded-[100px] h-[66px] md:h-[132px] w-[66px] md:w-[132px] object-cover object-[center_center] hover:scale-[1.1] transitions duration-400 easy-in-out"
+                    src="../../media/avatars/avatar-06.webp"
+                    alt=""
+                  />
+                </a>
               </div>
-              <div class="absolute right-[0] bottom-[90px] z-[2]">
-                <img class="rounded-[100px] max-h-[102px] max-w-[102px]" src="../../media/avatars/avatar-07.webp" alt="" />
+              <div class="absolute top-[50%] left-[95%] -translate-x-1/2 -translate-y-1/2 z-[2] h-[51px] md:h-[102px] w-[51px] md:w-[102px]">
+                <a href="#">
+                  <img
+                    class="shadow-avatar rounded-[100px] h-[51px] md:h-[102px] w-[51px] md:w-[102px] object-cover object-[center_center] hover:scale-[1.1] transitions duration-400 easy-in-out"
+                    src="../../media/avatars/avatar-07.webp"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -121,34 +188,40 @@
       </section>
       <section class="offer bg-[#F4F4F4]">
         <div class="container mx-auto line-vertical line-vertical-right relative">
-          <div class="flex w-full gap-[13px] z-[5]">
-            <div class="photo-dec w-[495px] h-auto">
-              <img class="block w-full h-full rounded-r-[3px]" src="../../media/companys/footer-companys.webp" alt="" />
+          <div class="flex flex-col-reverse md:flex-row w-full gap-[13px] z-[5]">
+            <div class="photo-dec relative md:w-[495px] z-[5] h-auto">
+              <img
+                class="block w-full max-h-[495px] md:max-h-[100%] h-[100vw] md:h-full md:h-[621px] rounded-r-[3px] object-cover object-[center_center]"
+                src="../../media/companys/footer-companys.webp"
+                srcset="../../media/companys/footer-companys_hd.webp x2"
+                alt=""
+              />
             </div>
-            <div class="flex flex-col max-w-[722px] gap-[12px]">
-              <p class="text-[17px] text-[#CBFC00] font-[300] leading-none ml-[18px] mb-[41px] h-[12px]">What you’ll get:</p>
-              <div class="offer__text relative left-[-124px] w-[846px] z-[8] bg-white rounded-[3px] flex justify-between h-[324px] py-[40px] pl-[44px] pr-[36px]">
-                <div>
-                  <h3 class="title-big_decor text-[38px] text-[#141133] font-[700] leading-[45px] font-['DM_Sans'] w-[241px] relative tracking-[-0.76px]">Effortless task management</h3>
+            <div class="flex flex-col max-w-[722px] gap-3">
+              <p class="text-[17px] text-[#CBFC00] font-light leading-none md:ml-[14px] mb-[18px] md:mb-[41px] h-[12px] tracking-[0.68px]">What you’ll get:</p>
+              <div class="items-start md:relative md:left-[-124px] md:w-[846px] z-[8] bg-white rounded-[3px] flex flex-col md:flex-row gap-10 md:gap-[68px] md:h-[324px]">
+                <div class="title-big_decor before:bottom-[-21px] md:before:bottom-[-38px]">
+                  <h3 class="text-2xl md:text-[38px] text-[#141133] font-bold leading-8 md:leading-[45px] font-dmsans md:w-[241px] relative tracking-[-0.76px] ml-5 md:ml-11 pt-5 md:pt-10 pr-5 md:pr-0">Effortless task management</h3>
                 </div>
-                <p class="text-[16px] font-[400] leading-[30px] pb-[10px] basis-[457px] line-clamp-[8]">
-                  Create tasks effortlessly on our platform or automate the process using API or file import. Simplify task administration with options like adding insurance or securing rights with a single click. Create tasks effortlessly on our platform or automate the process using API or file import. Simplify task administration with options like adding insurance or securing rights with a single click.
+                <p class="text-sm md:text-base font-normal leading-7 md:leading-[30px] p-[0_20px_20px] md:p-[40px_0_10px] md:basis-[457px] md:mr-[36px]">
+                  Create tasks effortlessly on our platform or automate the process using API or file import. Simplify task administration with options like adding insurance or securing rights with a single click. Create tasks effortlessly
+                  on our platform or automate the process using API or file import. Simplify task administration with options like adding insurance or securing rights with a single click.
                 </p>
               </div>
-              <div class="flex gap-[12px] z-[5]">
-                <div class="offer__text bg-white rounded-[3px] min-h-[324px] max-h-[361px] max-w-[355px] pr-[30px] pt-[27px] pb-[13px]">
+              <div class="flex flex-col md:flex-row gap-3 z-[5]">
+                <div class="w-full bg-white rounded-[3px] md:min-h-[324px] md:max-h-[361px] md:max-w-[355px] pr-[30px] pt-5 md:pt-[27px] pb-[13px]">
                   <div class="title-decor">
-                    <h3 class="text-[30px] text-[#141133] font-[700] leading-[36px] font-['DM_Sans'] ml-[30px] pb-[26px] tracking-[-0.6px]">Streamlined legal support</h3>
+                    <h3 class="text-2xl md:text-[30px] text-[#141133] font-bold leading-8 md:leading-9 font-dmsans ml-5 md:ml-[30px] pb-5 md:pb-[26px] tracking-[-0.6px]">Streamlined legal support</h3>
                   </div>
-                  <p class="text-[16px] font-[400] leading-[30px] max-w-[292px] pt-[31px] pb-[10px] pl-[30px] line-clamp-6">
+                  <p class="text-sm md:text-base font-normal leading-7 md:leading-[30px] md:max-w-[292px] pt-5 md:pt-[31px] pb-2.5 pl-5 md:pl-[30px]">
                     Receive monthly acceptance deeds and request invoices at any time. Maintain confidentiality with separate deeds and reports for projects involving multiple clients. Choose between electronic.
                   </p>
                 </div>
-                <div class="offer__text bg-white rounded-[3px] min-h-[324px] max-h-[361px] max-w-[355px] pr-[30px] pt-[27px] pb-[23px]">
+                <div class="w-full bg-white rounded-[3px] md:min-h-[324px] md:max-h-[361px] md:max-w-[355px] pr-[30px] pt-5 md:pt-[27px] pb-[23px]">
                   <div class="title-decor">
-                    <h3 class="max-w-[268px] text-[30px] text-[#141133] font-[700] leading-[36px] font-['DM_Sans'] ml-[32px] pb-[26px] tracking-[-0.6px]">Flexible payment solutions</h3>
+                    <h3 class="text-2xl md:text-[30px] text-[#141133] font-bold leading-8 md:leading-9 font-dmsans ml-5 md:ml-[32px] pb-5 md:pb-[26px] tracking-[-0.6px] md:max-w-[268px]">Flexible payment solutions</h3>
                   </div>
-                  <p class="text-[16px] font-[400] leading-[30px] pl-[30px] pt-[31px] line-clamp-6">
+                  <p class="text-sm md:text-base font-normal leading-7 md:leading-[30px] pl-5 md:pl-[30px] pt-5 md:pt-[31px]">
                     Pay only for completed work. Safeguard your funds with our secure account system, which offers refunds for unfinished tasks. Experience hassle-free payments to bank accounts, cards, or e-wallets.
                   </p>
                 </div>
@@ -158,20 +231,16 @@
         </div>
       </section>
     </main>
-    <footer class="pt-[121px] pb-[23px] bg-[#F4F4F4]">
+    <footer class="pt-[60px] md:pt-[121px] pb-[23px] bg-[#F4F4F4]">
       <div class="container mx-auto">
         <div class="border border-[#CECECE] rounded-[3px]">
-          <div class="flex justify-between">
-            <div class="flex gap-[42px] border-r border-[#CECECE] py-[16px] pl-[23px] pr-[37px]">
-              <a class="text-[14px] font-[700] leading-[26px]" href="#">Softskill.ai</a>
-              <p class="text-[14px] font-[400] leading-[26px]">All rights reserved © 2023</p>
-            </div>
-            <div class="place-self-center pr-[19px]">
-              <address class="text-[14px] font-[400] not-italic leading-[26px]">Softskill OU, reg. 16356331 Address: Narva mnt 5, Tallinn, 10117, Estonia</address>
-            </div>
+          <div class="md:px-[23px] px-6 py-[13px] md:px-0 md:py-0 w-full flex flex-col md:flex-row gap-1 md:gap-[42px]">
+            <p class="text-sm font-bold leading-[26px] md:py-4" href="#">Softskill.ai</p>
+            <p class="text-sm font-normal leading-[26px] md:py-4 md:pr-[37px] md:border-r md:border-[#CECECE]">All rights reserved © 2023</p>
+            <address class="md:text-end grow text-sm font-normal not-italic leading-[26px] md:py-4">Softskill OU, reg. 16356331 Address: Narva mnt 5, Tallinn, 10117, Estonia</address>
           </div>
           <div class="border-t border-[#CECECE] px-[23px] py-[13px]">
-            <ul class="flex gap-[41px] text-[14px] font-[600] leading-[26px]">
+            <ul class="flex flex-col md:flex-row gap-1 md:gap-[41px] text-sm font-semibold leading-[26px]">
               <a href="#">Terms of use</a>
               <a href="#">Subcontractor offer</a>
               <a href="#">Customer Agreement</a>
