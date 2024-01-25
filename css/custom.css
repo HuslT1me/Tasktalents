@@ -78,7 +78,7 @@ body {
 }
 
 .line-horizontal-company::after {
-  top: 68.3%;
+  top: 66.3%;
 }
 
 .line-horizontal::after {
@@ -86,7 +86,7 @@ body {
 }
 
 .line-horizontal-free::after {
-  top: 65%;
+  top: 67%;
 }
 
 .line-horizontal-work::after {
@@ -112,7 +112,7 @@ body {
   content: "";
   position: absolute;
   right: -460px;
-  bottom: 27px;
+  bottom: 25px;
   z-index: 10;
   width: 460px;
   height: 247px;
@@ -326,17 +326,22 @@ body {
   background-size: contain;
 }
 
-.promo-man {
-  object-position: center top;
+@media screen and (-webkit-min-device-pixel-ratio: 1) {
+  
+  .promo-man {
+    object-position: center top;
+  }
+  
+  .footer-man {
+    object-position: left center;
+  }
+  
+  .header-companys {
+    object-position: center center 
+  }
+
 }
 
-.footer-man {
-  object-position: left center;
-}
-
-.header-companys {
-  object-position: center center 
-}
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .footer-man {
