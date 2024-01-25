@@ -331,6 +331,10 @@ body {
   object-position: left center;
 }
 
+.header-companys {
+  object-position: center center 
+}
+
 @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .footer-man {
     object-position: top right;
@@ -340,6 +344,11 @@ body {
     object-position: -450px top;
   }
 
+    .header-companys {
+      object-position: -250px center;
+    }
+
+
   @media screen and (max-width: 767px) {
     .footer-man {
       object-position: -60px top;
@@ -347,6 +356,15 @@ body {
     
     .promo-man {
       object-position: right top;
+    }
+  
+    .header-companys {
+      object-position: -170px center;
+    }
+  }
+  @media screen and (max-width:370px) { 
+    .header-companys {
+      object-position: -130px center;
     }
   }
   

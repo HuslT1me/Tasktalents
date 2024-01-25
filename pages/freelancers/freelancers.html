@@ -16,16 +16,8 @@
               <img class="header__logo-img" src="../../media/icon/logo.svg" alt="BILLINGER" />
             </a>
           </div>
-          <div class="flex md:hidden text-sm place-self-end mb-auto">
-            <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00]" href="#">Sign up</a>
-          </div>
-          <div class="flex flex-col md:hidden gap-y-1 place-self-end mb-2.5 pr-2.5">
-            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
-            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
-            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
-          </div>
-          <nav class="nav hidden md:block mx-auto pr-[69px]">
-            <ul class="header__nav-menu flex gap-[33px] place-self-center text-sm font-medium leading-[19px]">
+          <nav class="hidden md:block mx-auto pr-[69px]">
+            <ul class="flex gap-[33px] place-self-center text-sm font-medium leading-[19px]">
               <li>
                 <a class="hover:text-[#CBFC00]" href="#">Company's</a>
               </li>
@@ -37,15 +29,20 @@
               </li>
             </ul>
           </nav>
-          <div class="hidden md:flex place-self-end">
-            <div class="flex header__laguage mr-[100px] gap-x-[25px] text-sm">
+          <div class="flex md:place-self-end">
+            <div class="hidden md:flex header__laguage mr-[100px] gap-x-[25px] text-sm">
               <a class="hover:opacity-[0.7] leading-[19px]" href="#">en</a>
               <a class="text-[#FFFFFF4D] leading-[19px]" href="#">ru</a>
             </div>
             <div class="flex text-sm gap-[32px]">
               <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00] leading-[19px]" href="#">Sign up</a>
-              <a class="header__button-enter hover:text-[#CBFC00] leading-[19px]" href="#">Sign in</a>
+              <a class="hidden md:flex hover:text-[#CBFC00] leading-[19px]" href="#">Sign in</a>
             </div>
+          </div>
+          <div class="flex flex-col md:hidden gap-y-1 place-self-end pr-2.5">
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
           </div>
         </div>
       </div>
@@ -55,7 +52,6 @@
       <section class="bg-[#141133] line-horizontal-free relative">
         <div class="container bg-[#141133] line-vertical line-vertical-right mx-auto relative z-[5] pb-[175px] pt-[30px] md:pt-[50px]">
           <div>
-            <!-- relative был тут -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-[40px]">
               <div class="w-full md:max-w-[488px] ml-5 md:ml-[73px]">
                 <h1 class="title-clamp w-full font-semibold tracking-[-0.90px] leading-[50px] md:leading-[65px] text-white md:mt-[17px] font-dmsans pr-[20px] md:pr-0">Thousands of tasks from all over the world are waiting for you</h1>
@@ -77,7 +73,7 @@
                   </div>
                   <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
                     <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-full">
-                      <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                      <div class="border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
                         <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
                           <li class="text-sm font-normal leading-5">12.04.2023</li>
                           <li class="text-sm font-bold leading-5">$1200</li>
@@ -113,7 +109,7 @@
                   </div>
                   <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
                     <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-full">
-                      <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                      <div class="border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
                         <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
                           <li class="text-sm font-normal leading-5">12.04.2023</li>
                           <li class="text-sm font-bold leading-5">$1200</li>
@@ -149,7 +145,7 @@
                   </div>
                   <div class="grid md:grid-rows-[123px_1fr] md:grid-cols-1 flex-1">
                     <div class="bg-[#141133] rounded-tr-[30px] md:mr-10 w-full">
-                      <div class="container border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
+                      <div class="border-l-[2px] border-[#CBFC00] border-opacity-[0.2] ml-5 md:ml-10 pl-2.5 md:pl-7">
                         <ul class="flex flex-wrap md:flex-row text-white py-[15px] md:p-[23px_0_26px] gap-3 md:gap-[27px]">
                           <li class="text-sm font-normal leading-5">12.04.2023</li>
                           <li class="text-sm font-bold leading-5">$1200</li>
@@ -189,32 +185,44 @@
             <p class="writing-mode text-[17px] font-light text-[#CBFC00] inline-block self-start pt-[100px] md:pt-0 pb-[30px] md:pb-0 md:px-[28px] leading-none tracking-[0.68px]">Choose a freelancers category:</p>
             <div class="grid grid-cols-1 grid-rows-[repeat(6,_206px)] grid-flow-row md:grid-rows-[172px_172px] md:grid-cols-[1fr_1fr_262px_262px] gap-[12px] w-full z-[10]">
               <article class="overflow-hidden md:row-span-2 bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-xl md:text-[22px] text-black font-bold leading-[26px] tracking-[-0.44px] pt-[18px] md:pt-[26px] capitalize font-dmsans px-5 md:pl-[30px] md:max-w-[240px]" href="#"> Programming & Development </a>
-                <a class="ml-auto max-w-[261px] max-h-[219px]" href="#"><img class="w-auto h-full object-contain" src="../../media/category/icon1.webp" srcset="../../media/category/icon1_hd.webp x2" alt="" /></a>
+                <div class="pt-[18px] md:pt-[26px] px-5 md:pl-[30px] pb-2.5 md:pb-0">
+                  <a class="text-xl md:text-[22px] text-black font-bold leading-[26px] tracking-[-0.44px]  capitalize font-dmsans" href="#"> Programming & Development </a>
+                </div>
+                <a class="ml-auto max-w-[261px] max-h-[219px]" href="#"><img class="w-auto h-full object-contain" src="../../media/category/icon1.webp"  srcset="../../media/category/icon1_hd.webp 2x" alt="" /></a>
               </article>
               <article class="overflow-hidden md:row-span-2 bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-xl md:text-[22px] text-black font-bold leading-[26px] tracking-[-0.44px] pt-[18px] md:pt-[26px] capitalize font-dmsans px-5 md:pl-[30px] md:max-w-[240px]" href="#"> Design / Branding & Creativity </a>
-                <a class="ml-auto max-w-[252px] max-h-[206px] w-full" href="#"><img class="w-full h-full object-contain" src="../../media/category/icon2.webp" srcset="../../media/category/icon2_hd.webp x2" alt="" /></a>
+                <div class="pt-[18px] md:pt-[26px] px-5 md:pl-[30px]">
+                  <a class="text-xl md:text-[22px] text-black font-bold leading-[26px] tracking-[-0.44px]  capitalize font-dmsans" href="#"> Design / Branding & Creativity </a>
+                </div>
+                <a class="ml-auto max-w-[252px] max-h-[206px] w-full" href="#"><img class="w-full h-full object-contain" src="../../media/category/icon2.webp" srcset="../../media/category/icon2_hd.webp 2x" alt="" /></a>
               </article>
-              <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-xl md:text-[18px] text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans pt-[16px] px-5" href="#"> SEO, SMM, IT Marketing </a>
+              <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between overflow-hidden">
+                <div class="pt-[16px] px-5">
+                  <a class="text-xl md:text-[18px] text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans" href="#"> SEO, SMM, IT Marketing </a>
+                </div>
                 <a class="ml-auto max-w-[150px] h-auto md:max-w-[132px] md:max-h-[109px] mr-[15px] w-full" href="#"
-                  ><img class="w-full h-full object-contain" src="../../media/category/icon3.webp" srcset="../../media/category/icon3_hd.webp x2" alt=""
+                  ><img class="w-full max-h-[130px] md:h-full object-contain" src="../../media/category/icon3.webp" srcset="../../media/category/icon3_hd.webp 2x" alt=""
                 /></a>
               </article>
-              <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-xl md:text-[18px] text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans pt-[16px] px-5" href="#"> Copyrights, Translation </a>
+              <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between overflow-hidden">
+                <div class="pt-[16px] px-5">
+                  <a class="text-xl md:text-[18px] text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans" href="#"> Copyrights, Translation </a>
+                </div>
                 <a class="ml-auto max-w-[150px] h-auto md:max-w-[132px] md:max-h-[109px] mr-[15px] w-full" href="#"
-                  ><img class="w-full h-full object-contain object-contain" src="../../media/category/icon3.webp" srcset="../../media/category/icon3_hd.webp x2" alt=""
+                  ><img class="w-full max-h-[130px] md:h-full object-contain object-contain" src="../../media/category/icon3.webp" srcset="../../media/category/icon3_hd.webp 2x" alt=""
                 /></a>
               </article>
-              <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-xl md:text-[18px] text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans pt-[15px] px-5 w-full" href="#"> IT Administration / DEVOPS and Support </a>
-                <a class="ml-auto max-w-[200px] h-auto md:max-w-[161px] md:max-h-[89px] w-full" href="#"><img class="w-full h-full object-contain" src="../../media/category/icon4.webp" srcset="../../media/category/icon4_hd.webp x2" alt="" /></a>
+              <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between overflow-hidden">
+                <div class="pt-[15px] px-5 pb-2.5 md:pb-0">
+                  <a class="text-xl md:text-[18px] text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans w-full" href="#"> IT Administration / DEVOPS and Support </a>
+                </div>
+                <a class="ml-auto max-w-[200px] h-auto md:max-w-[161px] md:max-h-[89px] w-full" href="#"><img class="w-full h-full object-contain" src="../../media/category/icon4.webp" srcset="../../media/category/icon4_hd.webp 2x" alt="" /></a>
               </article>
-              <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between">
-                <a class="text-xl md:text-[18px] text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans pt-[15px] px-5" href="#"> Blockchain & Smart Contracts / AI </a>
-                <a class="ml-auto max-w-[200px] h-auto md:max-w-[161px] md:max-h-[89px] w-full" href="#"><img class="w-full h-full object-contain" src="../../media/category/icon4.webp" srcset="../../media/category/icon4_hd.webp x2" alt="" /></a>
+              <article class="bg-[#E6E6E6] rounded-[3px] flex flex-col justify-between overflow-hidden">
+                <div class="pt-[15px] px-5 pb-2.5 md:pb-0">
+                  <a class="text-xl md:text-[18px] text-black font-bold leading-[26px] tracking-[-0.44px] capitalize font-dmsans" href="#"> Blockchain & Smart Contracts / AI </a>
+                </div>
+                <a class="ml-auto max-w-[200px] h-auto md:max-w-[161px] md:max-h-[89px] w-full" href="#"><img class="w-full h-full object-contain" src="../../media/category/icon4.webp" srcset="../../media/category/icon4_hd.webp 2x" alt="" /></a>
               </article>
             </div>
           </div>
@@ -227,7 +235,7 @@
               <img
                 class="block w-full rounded-r-[3px] w-full max-h-[495px] md:max-h-[100%] h-[100vw] md:h-full md:h-[621px] object-cover object-[center_center]"
                 src="../../media/freelancers/footer-freelancers.webp"
-                srcset="../../media/freelancers/footer-freelancers_hd.webp x2"
+                srcset="../../media/freelancers/footer-freelancers_hd.webp 2x"
                 alt=""
               />
             </div>
@@ -244,7 +252,7 @@
                 </p>
               </div>
               <div class="flex flex-col md:flex-row gap-[12px] z-[5]">
-                <div class="w-full bg-white rounded-[3px] md:min-h-[324px] md:max-h-[361px] md:max-w-[355px] pr-[30px] pt-[27px] pb-2.5 md:pb-[13px]">
+                <div class="w-full bg-white rounded-[3px] md:min-h-[324px] md:max-w-[355px] pr-[30px] pt-[27px] pb-2.5 md:pb-[13px]">
                   <div class="title-decor">
                     <h3 class="text-2xl md:text-[30px] text-[#141133] font-bold leading-8 md:leading-9 font-dmsans ml-5 md:ml-[30px] pb-5 md:pb-[26px] tracking-[-0.6px]">Forget about paperwork</h3>
                   </div>
@@ -252,11 +260,11 @@
                     We automatically generate contracts and invoices for you and your clients. All documentation related to your transactions is easily accessible in your personal account.
                   </p>
                 </div>
-                <div class="bg-white rounded-[3px] md:min-h-[324px] md:max-h-[361px] md:max-w-[355px] pr-5 md:pr-[30px] pt-5 md:pt-[27px] pb-5 md:pb-[23px]">
+                <div class="bg-white rounded-[3px] md:min-h-[324px] pr-5 md:pr-[30px] pt-5 md:pt-[27px] pb-5 md:pb-[23px]">
                   <div class="title-decor">
                     <h3 class="text-2xl md:text-[30px] text-[#141133] font-bold leading-8 md:leading-9 font-dmsans ml-5 md:ml-[32px] pb-5 md:pb-[26px] tracking-[-0.6px] max-w-[268px]">Fast payment for your services</h3>
                   </div>
-                  <p class="text-sm md:text-base font-normal leading-7 md:leading-[30px] basis-[457px] pl-5 md:pl-[30px] pt-5 md:pt-[31px]">
+                  <p class="text-sm md:text-base font-normal leading-7 md:leading-[30px] max-w-[457px] pl-5 md:pl-[30px] pt-5 md:pt-[31px]">
                     Client funds are stored in a deposit account and released upon completion of the task in any currency you prefer. Client funds are stored in a deposit account and released upon completion of the task in any currency.
                   </p>
                 </div>
