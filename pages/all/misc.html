@@ -16,16 +16,8 @@
               <img class="header__logo-img" src="../../media/icon/logo.svg" alt="BILLINGER" />
             </a>
           </div>
-          <div class="flex md:hidden text-sm  place-self-end mb-auto">
-            <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00]" href="#">Sign up</a>
-          </div>
-          <div class="flex flex-col md:hidden gap-y-1 place-self-end mb-2.5 pr-2.5">
-            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
-            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
-            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
-          </div>
-          <nav class="nav hidden md:block mx-auto pr-[69px]">
-            <ul class="header__nav-menu flex gap-[33px] place-self-center text-sm font-medium leading-[19px]">
+          <nav class="hidden md:block mx-auto pr-[69px]">
+            <ul class="flex gap-[33px] place-self-center text-sm font-medium leading-[19px]">
               <li>
                 <a class="hover:text-[#CBFC00]" href="#">Company's</a>
               </li>
@@ -37,15 +29,20 @@
               </li>
             </ul>
           </nav>
-          <div class="hidden md:flex place-self-end">
-            <div class="flex header__laguage mr-[100px] gap-x-[25px] text-sm">
+          <div class="flex md:place-self-end">
+            <div class="hidden md:flex header__laguage mr-[100px] gap-x-[25px] text-sm">
               <a class="hover:opacity-[0.7] leading-[19px]" href="#">en</a>
               <a class="text-[#FFFFFF4D] leading-[19px]" href="#">ru</a>
             </div>
             <div class="flex text-sm gap-[32px]">
               <a class="text-[#CBFC00] font-bold hover:text-[#CBFC00] leading-[19px]" href="#">Sign up</a>
-              <a class="header__button-enter hover:text-[#CBFC00] leading-[19px]" href="#">Sign in</a>
+              <a class="hidden md:flex hover:text-[#CBFC00] leading-[19px]" href="#">Sign in</a>
             </div>
+          </div>
+          <div class="flex flex-col md:hidden gap-y-1 place-self-end pr-2.5">
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
+            <div class="bg-white border-[2px] w-[30px] rounded-[30px]"></div>
           </div>
         </div>
       </div>
