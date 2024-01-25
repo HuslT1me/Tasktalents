@@ -323,7 +323,42 @@ body {
   background: url(../media/icon/star_green.svg);
 }
 
+.promo-man {
+  object-position: center top;
+}
+
+.footer-man {
+  object-position: left center;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .footer-man {
+    object-position: top right;
+  }
+  
+  .promo-man {
+    object-position: -450px top;
+  }
+
+  @media screen and (max-width: 767px) {
+    .footer-man {
+      object-position: -60px top;
+    }
+    
+    .promo-man {
+      object-position: right top;
+    }
+  }
+  
+} 
+
+
 @media (max-width: 768px) {
+  
+  .footer-man {
+    object-position: -60px top;
+  }  
+  
   .writing-mode {
     writing-mode: horizontal-tb;
     transform: rotate(0);
