@@ -321,6 +321,9 @@ body {
 
 .icon-star-green {
   background: url(../media/icon/star_green.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .promo-man {
