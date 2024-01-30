@@ -312,7 +312,6 @@ body {
 .dec-line-freelancers::after {
   content: "";
   position: absolute;
-  top: 22px;
   right: -100vw;
   width: 100vw;
   height: 2px;
